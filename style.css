@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200,500&family=Roboto+Condensed:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&family=Roboto+Condensed:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&800&family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,300;9..40,400&family=Montserrat&display=swap");
+
+@import url("scrollbar.css");
+@import url("aboutStyle.css");
+@import url("navbarStyle.css");
+
+body {
+  background-color: #292524;
+  overflow-x: hidden;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#textual {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3em;
+  padding-top: 8em;
+}
+
+.devTag {
+  color: black;
+  background-color: rgb(110, 243, 163);
+  font-family: "Dm Sans", sans-serif;
+  font-weight: 800;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-bottom: 2em;
+  border-radius: 7px;
+  text-align: center;
+  width: fit-content;
+}
+
+.subTextual {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10em;
+}
+
+.quote p {
+  color: white;
+  font-size: 40pt;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-family: "Dm Sans", sans-serif;
+}
+
+.quoteAuthor {
+  margin-bottom: 4em;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(105, 105, 105);
+}
+
+.subQuote {
+  color: rgb(135, 135, 135);
+  margin-bottom: 4em;
+  font-size: 12pt;
+  font-family: "Source Code Pro", monospace;
+}
+
+.discussion {
+  color: rgb(110, 243, 163);
+  text-decoration: underline;
+  font-size: 17pt;
+  font-family: "Dm Sans", sans-serif;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.discussion:hover {
+  cursor: pointer;
+  text-underline-offset: 0.2em;
+}
+
+#reference {
+  display: flex;
+  gap: 5em;
+  padding-left: 2em;
+  padding-top: 7em;
+  align-items: flex-end;
+}
+
+.experience,
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8em;
+}
+
+.experience p.years,
+.projects p.projectCount {
+  color: white;
+  font-size: 40pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.experience p.text,
+.projects p.text {
+  color: rgb(135, 135, 135);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+#radialGradient {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+#profileImage {
+  transform: scale(1.2);
+  position: relative;
+  top: 30px;
+  margin-right: 6em;
+}
+
+.navActive {
+  color: rgb(110, 243, 163) !important;
+  font-weight: bold;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+#scrollUp {
+  position: fixed;
+  bottom: 8em;
+  right: 8em;
+  background-color: #48413f;
+  display: none;
+  padding: 1em;
+  border-radius: 50%;
+  animation: scaleUp 0.2s forwards;
+}
+
+#scrollUp:hover {
+  cursor: pointer;
+}

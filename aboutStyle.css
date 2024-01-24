@@ -1,0 +1,109 @@
+#about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+}
+
+#areas {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.areaCard {
+  background-color: rgb(54, 54, 54);
+  padding: 2em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.areaCard .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15em;
+}
+
+.areaCard .ml {
+  gap: 5em;
+}
+
+.areaCard .title p {
+  font-size: 35pt;
+  margin: 0;
+  color: white;
+  font-family: "Dm Sans", sans-serif;
+}
+
+.areaCard:hover .title p {
+  color: #6ef3a3;
+}
+
+.areaCard .description {
+  color: rgb(135, 135, 135);
+  font-family: "Source Code Pro", monospace;
+  margin-bottom: 2em;
+  font-size: 10pt;
+}
+
+.areaCard .projectCount {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  text-decoration: underline;
+  font-size: 10pt;
+}
+
+.areaCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+#introduction {
+  width: 30%;
+}
+
+#introduction .miniTitle {
+  color: rgb(135, 135, 135);
+  font-family: "Source Code Pro", monospace;
+  margin-bottom: 2em;
+}
+
+#introduction .title {
+  color: white;
+  font-size: 30pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  margin-bottom: 1em;
+}
+
+#introduction .title spam {
+  color: #6ef3a3;
+  font-weight: 800;
+  font-size: 50pt;
+}
+
+#introduction .introductionContent .introQuote {
+  color: white;
+  font-size: 20pt;
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+}
+
+#introduction .introductionContent .author {
+  color: rgb(135, 135, 135);
+  font-family: "Source Code Pro", monospace;
+  font-size: 10pt;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 5em;
+}
+
+#introduction .introductionContent .content {
+  color: rgb(135, 135, 135);
+  font-family: "Source Code Pro", monospace;
+}
