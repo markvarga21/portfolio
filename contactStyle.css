@@ -2,6 +2,74 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 2em;
   align-items: center;
+}
+
+#contact .title {
+  font-size: 50pt;
+  font-family: "Dm Sans", sans-serif;
+  color: white;
+  font-weight: 100;
+}
+
+.subInput {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+#contactForm .names {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+#contactForm input,
+#contactForm textarea {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 1em;
+  margin-bottom: 1em;
+  color: white;
+}
+
+#contactForm input::placeholder {
+  font-family: "Source Code Pro", monospace;
+}
+
+#contactForm textarea::placeholder {
+  font-family: "Source Code Pro", monospace;
+}
+
+#contactForm textarea {
+  resize: vertical;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#contactForm button {
+  border: 0;
+  text-decoration: none;
+  background-color: rgb(110, 243, 163);
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  padding: 0.5em;
+  border-radius: 10px;
+}
+
+#contact .description {
+  color: white;
+  text-align: center;
+  padding-bottom: 3em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  color: rgb(171, 171, 171);
 }

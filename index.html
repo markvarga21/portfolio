@@ -346,6 +346,32 @@
     <button id="startStop" class="start" onclick="startStopAnimation(event)">Start animation</button>
     <div id="contact">
         <div class="title">Contact me</div>
+        <div class="description">Let's get this conversation started! Tell me a bit about yourself, and<br>I'll get in touch with you as soon as possible.</div>
+        <form id="contactForm">
+          <div class="names">
+            <div class="subInput">
+              <label for="contactFirstName">First name</label>
+              <input id="contactFirstName" type="text" placeholder="John" required/>
+            </div>
+            <div class="subInput">
+              <label for="contactLastName">Last name</label>
+              <input id="contactLastName" type="text" placeholder="Doe" required/>
+            </div>
+          </div>
+          <div class="subInput">
+            <label for="contactEmail">Email</label>
+            <input id="contactEmail" type="email" placeholder="john.doe@gmail.com" required/>
+          </div>
+          <div class="subInput">
+            <label for="subject">Subject</label>
+            <input id="subject" type="text" placeholder="Order information" required/>
+          </div>
+          <div class="subInput">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Hello, my name is..." required></textarea>
+          </div>
+          <button id="contactSubmit" onclick="sendEmail(event)">Send</button>
+        </form>
     </div>
     <div id="radialGradient"></div>
     <div id="scrollUp" onclick="scrollToTop()">

@@ -127,3 +127,37 @@ function startStopAnimation(event) {
       "paused";
   }
 }
+
+function emptyFields() {
+  document.getElementById("contactFirstName").value = "";
+  document.getElementById("contactLastName").value = "";
+  document.getElementById("contactEmail").value = "";
+  document.getElementById("subject").value = "";
+  document.getElementById("message").value = "";
+}
+
+function sendEmail(event) {
+  event.preventDefault();
+  const emailComponent = {
+    firstName: document.getElementById("contactFirstName").value,
+    lastName: document.getElementById("contactLastName").value,
+    email: document.getElementById("contactEmail").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value,
+  };
+  const mailtoLink =
+    `mailto:` +
+    encodeURIComponent(emailComponent.email) +
+    `?subject=` +
+    encodeURIComponent(emailComponent.subject) +
+    `&body=` +
+    encodeURIComponent(
+      emailComponent.message +
+        "\n\n" +
+        emailComponent.firstName +
+        " " +
+        emailComponent.lastName
+    );
+  window.location.href = mailtoLink;
+  emptyFields();
+}
