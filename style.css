@@ -10,6 +10,8 @@
 @import url("projectsStyle.css");
 @import url("contactStyle.css");
 
+@import url("mHome.css");
+
 body {
   background-color: #292524;
   overflow-x: hidden;
@@ -190,4 +192,94 @@ body {
   top: 290vh;
   width: 30em;
   left: calc(50% - 15em);
+}
+
+#topNav {
+  display: none;
+}
+
+/* ----------------------------------------------------- */
+/* Mobile version */
+
+@media only screen and (max-width: 600px) {
+  #content {
+    flex-direction: column;
+  }
+
+  #textual {
+    padding: 0;
+    padding-top: 3em;
+  }
+
+  .subTextual {
+    padding-left: 0.5em;
+  }
+
+  #reference {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 0.6em;
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  #profileImage {
+    display: none;
+  }
+
+  #arrow1,
+  #arrow2,
+  #arrow3 {
+    display: none;
+  }
+
+  #topNav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mName {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  #burgerIcon {
+    font-size: 50pt;
+    color: white;
+    padding-left: 0.2em;
+  }
+
+  #id {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #navigations {
+    display: none;
+  }
+
+  #navigations .nav {
+    padding: 1em;
+    text-align: left;
+    background-color: #1e1e1e;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .contact {
+    display: none;
+  }
+
+  #about,
+  #projects {
+    display: none;
+  }
 }

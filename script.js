@@ -165,3 +165,13 @@ function sendEmail(event) {
 function moveToContact() {
   document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 }
+
+function showMobileNav() {
+  const nav = document.getElementById("navigations");
+  const actualState = nav.style.display;
+  if (actualState === "none") {
+    nav.style.display = "block";
+  } else {
+    nav.style.display = "none";
+  }
+}

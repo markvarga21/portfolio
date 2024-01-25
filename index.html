@@ -9,6 +9,25 @@
   </head>
   <body>
     <div id="main">
+    <div id="top">
+      <div id="topNav">
+        <div id="burgerIcon" onclick="showMobileNav(event)">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 50 50">
+            <path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z" fill="#FFFFFF"></path>
+          </svg>
+        </div>
+        <div class="mName">
+          <div id="firstName">Mark</div>
+          <div id="lastName">Varga</div>
+        </div>
+      </div>
+      <div id="navigations">
+        <div class="nav" id="aboutNav" onclick="handleNavClick(event)">About</div>
+        <div class="nav" id="mainNav" onclick="handleNavClick(event)" class="navActive">Home</div>
+        <div class="nav" id="projectsNav" onclick="handleNavClick(event)">Projects</div>
+        <div class="nav" id="contactNav" onclick="handleNavClick(event)">Contact</div>
+      </div>
+    </div>
     <div id="navbar">
       <div class="name">
         <div id="firstName">Mark</div>
@@ -348,33 +367,33 @@
     </div>
     <button id="startStop" class="start" onclick="startStopAnimation(event)">Start animation</button>
     <div id="contact">
-        <div class="title">Contact me</div>
-        <div class="description">Let's get this conversation started! Tell me a bit about yourself, and<br>I'll get in touch with you as soon as possible.</div>
-        <form id="contactForm">
-          <div class="names">
-            <div class="subInput">
-              <label for="contactFirstName">First name</label>
-              <input id="contactFirstName" type="text" placeholder="John" required/>
-            </div>
-            <div class="subInput">
-              <label for="contactLastName">Last name</label>
-              <input id="contactLastName" type="text" placeholder="Doe" required/>
-            </div>
+      <div class="title">Contact me</div>
+      <div class="description">Let's get this conversation started! Tell me a bit about yourself, and<br>I'll get in touch with you as soon as possible.</div>
+      <form id="contactForm">
+        <div class="names">
+          <div class="subInput">
+            <label for="contactFirstName">First name</label>
+            <input id="contactFirstName" type="text" placeholder="John" required/>
           </div>
           <div class="subInput">
-            <label for="contactEmail">Email</label>
-            <input id="contactEmail" type="email" placeholder="john.doe@gmail.com" required/>
+            <label for="contactLastName">Last name</label>
+            <input id="contactLastName" type="text" placeholder="Doe" required/>
           </div>
-          <div class="subInput">
-            <label for="subject">Subject</label>
-            <input id="subject" type="text" placeholder="Order information" required/>
-          </div>
-          <div class="subInput">
-            <label for="message">Message</label>
-            <textarea id="message" placeholder="Hello, my name is..." required></textarea>
-          </div>
-          <button id="contactSubmit" onclick="sendEmail(event)">Send</button>
-        </form>
+        </div>
+        <div class="subInput">
+          <label for="contactEmail">Email</label>
+          <input id="contactEmail" type="email" placeholder="john.doe@gmail.com" required/>
+        </div>
+        <div class="subInput">
+          <label for="subject">Subject</label>
+          <input id="subject" type="text" placeholder="Order information" required/>
+        </div>
+        <div class="subInput">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Hello, my name is..." required></textarea>
+        </div>
+        <button id="contactSubmit" onclick="sendEmail(event)">Send</button>
+      </form>
     </div>
     <div id="radialGradient"></div>
     <div id="scrollUp" onclick="scrollToTop()">
