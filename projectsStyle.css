@@ -123,3 +123,14 @@
   object-fit: cover;
   border-radius: 0.5em;
 }
+
+#arrow1 {
+  position: absolute;
+  top: 60vh;
+  transform: scale(0.1);
+}
+
+button#startStopButton {
+  background-color: red;
+  padding: 2em;
+}

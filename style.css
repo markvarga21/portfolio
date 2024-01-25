@@ -9,6 +9,7 @@
 @import url("aboutStyle.css");
 @import url("navbarStyle.css");
 @import url("projectsStyle.css");
+@import url("contactStyle.css");
 
 body {
   background-color: #292524;
