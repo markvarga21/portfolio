@@ -8,6 +8,7 @@
 @import url("scrollbar.css");
 @import url("aboutStyle.css");
 @import url("navbarStyle.css");
+@import url("projectsStyle.css");
 
 body {
   background-color: #292524;

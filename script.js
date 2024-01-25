@@ -92,3 +92,32 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
   removeAllActive();
 }
+
+const scroller = document.getElementById("projects");
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+  scroller.setAttribute("data-animated", true);
+  const scrollerInner = document.querySelector(".inner");
+  const scrollerContent = Array.from(scrollerInner.children);
+
+  // Add event listeners to pause and resume animation on hover
+  scrollerInner.addEventListener("mouseenter", () => {
+    console.log("Mouse entered!");
+    document.querySelector("#projects .inner").style.animationPlayState =
+      "paused";
+  });
+  scrollerInner.addEventListener("mouseleave", () => {
+    console.log("Mouse left!");
+    document.querySelector("#projects .inner").style.animationPlayState =
+      "running";
+  });
+
+  scrollerContent.forEach((item) => {
+    const duplicatedItem = item.cloneNode(true);
+    duplicatedItem.setAttribute("area-hidden", true);
+    scrollerInner.appendChild(duplicatedItem);
+  });
+}
