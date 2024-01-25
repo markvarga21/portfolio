@@ -161,3 +161,7 @@ function sendEmail(event) {
   window.location.href = mailtoLink;
   emptyFields();
 }
+
+function moveToContact() {
+  document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+}

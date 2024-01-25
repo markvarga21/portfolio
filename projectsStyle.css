@@ -124,17 +124,11 @@
   border-radius: 0.5em;
 }
 
-#arrow1 {
-  position: absolute;
-  top: 60vh;
-  transform: scale(0.1);
-}
-
 button.start {
   position: absolute;
   border: 0;
   top: 285vh;
-  left: 50%;
+  left: calc(50% - 5em);
   height: 2em;
   width: 10em;
   text-align: center;
@@ -150,7 +144,7 @@ button.stop {
   position: absolute;
   border: 0;
   top: 285vh;
-  left: 50%;
+  left: calc(50% - 5em);
   height: 2em;
   width: 10em;
   text-align: center;
