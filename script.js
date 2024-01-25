@@ -103,21 +103,27 @@ function addAnimation() {
   const scrollerInner = document.querySelector(".inner");
   const scrollerContent = Array.from(scrollerInner.children);
 
-  // Add event listeners to pause and resume animation on hover
-  scrollerInner.addEventListener("mouseenter", () => {
-    console.log("Mouse entered!");
-    document.querySelector("#projects .inner").style.animationPlayState =
-      "paused";
-  });
-  scrollerInner.addEventListener("mouseleave", () => {
-    console.log("Mouse left!");
-    document.querySelector("#projects .inner").style.animationPlayState =
-      "running";
-  });
-
   scrollerContent.forEach((item) => {
     const duplicatedItem = item.cloneNode(true);
     duplicatedItem.setAttribute("area-hidden", true);
     scrollerInner.appendChild(duplicatedItem);
   });
+}
+
+const startStop = document.getElementById("startStop");
+function startStopAnimation(event) {
+  const status = event.target.classList[0];
+  if (status === "start") {
+    startStop.classList.remove("start");
+    startStop.classList.add("stop");
+    startStop.innerHTML = "Stop animation";
+    document.querySelector("#projects .inner").style.animationPlayState =
+      "running";
+  } else if (status === "stop") {
+    startStop.classList.remove("stop");
+    startStop.classList.add("start");
+    startStop.innerHTML = "Start animation";
+    document.querySelector("#projects .inner").style.animationPlayState =
+      "paused";
+  }
 }

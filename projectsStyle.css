@@ -26,7 +26,7 @@
   width: max-content;
   flex-wrap: nowrap;
   animation: scroll 60s linear infinite;
-  animation-play-state: running;
+  animation-play-state: paused;
 }
 
 #projects {
@@ -130,7 +130,40 @@
   transform: scale(0.1);
 }
 
-button#startStopButton {
-  background-color: red;
-  padding: 2em;
+button.start {
+  position: absolute;
+  border: 0;
+  top: 285vh;
+  left: 50%;
+  height: 2em;
+  width: 10em;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #6ef3a3;
+  border-radius: 10px;
+  font-family: "Dm Sans", sans-serif;
+  color: black;
+  font-weight: 400;
+}
+
+button.stop {
+  position: absolute;
+  border: 0;
+  top: 285vh;
+  left: 50%;
+  height: 2em;
+  width: 10em;
+  text-align: center;
+  vertical-align: middle;
+  border: 2px solid #6ef3a3;
+  border-radius: 10px;
+  background-color: transparent;
+  font-family: "Dm Sans", sans-serif;
+  color: #6ef3a3;
+  font-weight: 400;
+}
+
+button {
+  cursor: pointer;
+  font-size: 15pt;
 }
