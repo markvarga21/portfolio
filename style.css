@@ -10,8 +10,6 @@
 @import url("projectsStyle.css");
 @import url("contactStyle.css");
 
-@import url("mHome.css");
-
 body {
   background-color: #292524;
   overflow-x: hidden;
@@ -206,10 +204,28 @@ body {
   display: none;
 }
 
+#mAreas {
+  display: none;
+}
+
 /* ----------------------------------------------------- */
 /* Mobile version */
 
 @media only screen and (max-width: 600px) {
+  #areas {
+    display: none;
+  }
+
+  #mAreas {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #mAreas .areaCard {
+    padding: 0.8em;
+    margin-bottom: 1em;
+  }
+
   #top {
     display: block;
   }
@@ -219,6 +235,7 @@ body {
   }
   #content {
     flex-direction: column;
+    margin-bottom: 15em;
   }
 
   #textual {
@@ -235,6 +252,8 @@ body {
     display: flex;
     flex-direction: row;
     gap: 0.6em;
+    margin-top: 3em;
+    margin-left: 1em;
   }
 
   #navbar {
@@ -263,7 +282,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 0.5em;
-    padding-right: 0.5em;
+    padding-right: 2em;
   }
 
   #burgerIcon {
@@ -289,12 +308,6 @@ body {
     font-family: "Montserrat", sans-serif;
   }
 
-  #reference {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
   #reference .experience p.years,
   #reference .projects p.projectCount {
     font-size: 30pt;
@@ -305,8 +318,16 @@ body {
     font-size: 10pt;
   }
 
+  #reference .projects {
+    display: flex;
+  }
+
   .projects {
-    width: fit-content;
+    display: none;
+  }
+
+  #startStop {
+    display: none;
   }
 
   #contactForm {
@@ -353,8 +374,37 @@ body {
     height: 100svh;
   }
 
-  #areas {
-    display: none;
+  #mAreas {
+    width: 80svw;
+  }
+
+  #mAreas .areaCard {
+    padding: 0.8em;
+  }
+
+  #mAreas .areaCard .title p {
+    font-size: 15pt;
+    font-weight: 800;
+  }
+
+  #mAreas .areaCard .title svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  #mAreas .areaCard .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  #mAreas {
+    margin-bottom: 10em;
+  }
+
+  #introduction .content {
+    padding-bottom: 2em;
   }
 
   #about {
@@ -365,7 +415,8 @@ body {
     margin: 0;
     justify-content: center;
     align-items: center;
-    padding-left: 2em;
+    padding-left: 5svw;
+    margin-top: 3em;
   }
 
   .subInput #contactFirstName,
@@ -383,5 +434,13 @@ body {
 
   #projects {
     display: none;
+  }
+
+  .quote {
+    width: 85svw;
+  }
+
+  .quote p {
+    font-size: 30pt;
   }
 }
