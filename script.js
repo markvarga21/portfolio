@@ -5,6 +5,13 @@ document.getElementById("github").addEventListener("click", () => {
   window.open("https://github.com/markvarga21", "_blank");
 });
 
+document.getElementById("linkedinMobile").addEventListener("click", () => {
+  window.open("https://www.linkedin.com/in/markvarga21/", "_blank");
+});
+document.getElementById("githubMobile").addEventListener("click", () => {
+  window.open("https://github.com/markvarga21", "_blank");
+});
+
 document.addEventListener("mousemove", function (event) {
   // Get the mouse position
   var mouseX = event.clientX;
