@@ -212,6 +212,11 @@ body {
 /* Mobile version */
 
 @media only screen and (max-width: 600px) {
+  #introduction,
+  #about {
+    all: unset;
+  }
+
   #areas {
     display: none;
   }
@@ -356,6 +361,11 @@ body {
     width: 100svw;
     padding: 0;
     margin: 0;
+  }
+
+  #contact {
+    height: 100svh;
+    margin-top: 4em;
   }
 
   .contactMobile #linkedinMobile,
