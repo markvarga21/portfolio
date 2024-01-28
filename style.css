@@ -366,7 +366,7 @@ body {
 
   #contact {
     height: 100svh;
-    margin-top: 4em;
+    border: 1px solid red;
   }
 
   #contact .title {
@@ -431,7 +431,7 @@ body {
     justify-content: center;
     align-items: center;
     padding-left: 5svw;
-    margin-top: 3em;
+    padding-bottom: 5em;
   }
 
   .subInput #contactFirstName,
