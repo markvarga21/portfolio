@@ -139,6 +139,18 @@ function startStopAnimation(event) {
   }
 }
 
+document.querySelector("#projects .inner").addEventListener("mouseover", () => {
+  document.querySelector("#projects .inner").style.animationPlayState =
+    "paused";
+});
+
+document
+  .querySelector("#projects .inner")
+  .addEventListener("mouseleave", () => {
+    document.querySelector("#projects .inner").style.animationPlayState =
+      "running";
+  });
+
 function emptyFields() {
   document.getElementById("contactFirstName").value = "";
   document.getElementById("contactLastName").value = "";

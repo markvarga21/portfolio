@@ -12,7 +12,6 @@
 
 body {
   background-color: #292524;
-  overflow-x: hidden;
 }
 
 #main {
@@ -312,10 +311,6 @@ body {
     display: flex;
   }
 
-  .projects {
-    display: none;
-  }
-
   #startStop {
     display: none;
   }
@@ -420,10 +415,6 @@ body {
 
   #introduction {
     width: 85svw;
-  }
-
-  #projects {
-    display: none;
   }
 
   .quote {

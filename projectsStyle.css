@@ -26,7 +26,7 @@
   width: max-content;
   flex-wrap: nowrap;
   animation: scroll 60s linear infinite;
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 
 #projects {
@@ -117,20 +117,18 @@
   overflow: hidden;
 }
 
-@media (min-width: 1300px) {
-  .projectImage img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0.5em;
-  }
+.projectImage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5em;
 }
 
 button.start {
   position: absolute;
   border: 0;
-  top: 285vh;
+  top: 285svh;
   left: calc(50% - 5em);
   height: 2em;
   width: 10em;
@@ -163,4 +161,26 @@ button.stop {
 button {
   cursor: pointer;
   font-size: 15pt;
+}
+
+#mProjects {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  #mProjects {
+    width: 80vw;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    color: white;
+    overflow-x: scroll;
+  }
+
+  #mProjects .mProject {
+    padding: 3em;
+    background-color: red;
+    min-width: 100px !important; /* Add this line */
+  }
 }

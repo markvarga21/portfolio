@@ -6,13 +6,11 @@
   background: #292524;
 }
 
-/* This is the handle */
 ::-webkit-scrollbar-thumb {
   background: #48413f;
   border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
