@@ -192,20 +192,21 @@ body {
   left: calc(50% - 15em);
 }
 
-#top {
-  display: none;
-}
-
-#navigations {
-  display: none;
-}
-
-.contactMobile {
-  display: none;
-}
-
+#top,
+#navigations,
+.contactMobile,
 #mAreas {
   display: none;
+}
+
+#contactForm {
+  width: 50svw;
+}
+
+#contactForm .subInput:first-child {
+  width: 50svw;
+  display: flex;
+  justify-content: stretch;
 }
 
 /* ----------------------------------------------------- */

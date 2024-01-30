@@ -82,6 +82,10 @@ function handleNavClick(event) {
   document.getElementById(itemId).scrollIntoView({ behavior: "smooth" });
 }
 
+function navigateToContact() {
+  document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+}
+
 window.addEventListener("scroll", function () {
   const scrollUp = document.getElementById("scrollUp");
   if (window.pageYOffset > 500) {

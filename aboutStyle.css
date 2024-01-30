@@ -17,6 +17,7 @@
   padding: 2em;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 10px;
+  height: 20svh;
 }
 
 .areaCard .title {
@@ -46,6 +47,7 @@
   font-family: "Source Code Pro", monospace;
   margin-bottom: 2em;
   font-size: 10pt;
+  max-width: 300px;
 }
 
 .areaCard .projectCount {
