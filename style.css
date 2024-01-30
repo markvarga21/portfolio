@@ -225,11 +225,7 @@ body {
   #mAreas {
     display: flex;
     flex-direction: column;
-  }
-
-  #mAreas .areaCard {
-    padding: 0.8em;
-    margin-bottom: 1em;
+    gap: 2em;
   }
 
   #top {
@@ -239,6 +235,7 @@ body {
   #navigations {
     display: block;
   }
+
   #content {
     flex-direction: column;
     margin-bottom: 15em;
@@ -337,23 +334,21 @@ body {
   }
 
   #contactForm {
-    width: 90vw;
-    width: 90svw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding-bottom: 5em;
   }
 
-  #contactForm .names {
-    width: 80svw;
+  #contactForm .subInput:first-child {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    gap: 0.3em;
+    justify-content: stretch;
   }
 
   .contact {
     display: none;
-  }
-
-  #contact .description {
-    padding-bottom: 0;
   }
 
   .contactMobile {
@@ -362,11 +357,6 @@ body {
     width: 100svw;
     padding: 0;
     margin: 0;
-  }
-
-  #contact {
-    height: 100svh;
-    border: 1px solid red;
   }
 
   #contact .title {
@@ -389,12 +379,10 @@ body {
     height: 100svh;
   }
 
-  #mAreas {
-    width: 80svw;
-  }
-
   #mAreas .areaCard {
-    padding: 0.8em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
   }
 
   #mAreas .areaCard .title p {
@@ -414,16 +402,12 @@ body {
     gap: 0.5em;
   }
 
-  #mAreas {
-    margin-bottom: 10em;
-  }
-
   #introduction .content {
     padding-bottom: 2em;
   }
 
   #about {
-    height: 100svh;
+    height: fit-content;
     width: 85svw;
     display: flex;
     flex-direction: column;
@@ -432,11 +416,6 @@ body {
     align-items: center;
     padding-left: 5svw;
     padding-bottom: 5em;
-  }
-
-  .subInput #contactFirstName,
-  .subInput #contactLastName {
-    width: 38svw;
   }
 
   #introduction .title spam {
@@ -457,5 +436,16 @@ body {
 
   .quote p {
     font-size: 30pt;
+  }
+
+  #scrollUp {
+    position: fixed;
+    bottom: 10svh;
+    right: 10svw;
+    background-color: #48413f;
+    display: none;
+    padding: 1em;
+    border-radius: 50%;
+    animation: scaleUp 0.2s forwards;
   }
 }
