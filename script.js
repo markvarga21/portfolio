@@ -193,6 +193,8 @@ function changeProject(event) {
   hideAllDescriptions();
 }
 
+function flipArrow() {}
+
 function openDescription(event) {
   const actual = event.target;
   element = actual.parentElement.querySelectorAll(".description")[0];
