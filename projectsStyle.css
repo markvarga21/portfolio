@@ -168,6 +168,10 @@
     width: 4svw;
     height: 4svw;
   }
+
+  #projects p {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 1100px) {
@@ -176,3 +180,19 @@
     height: 2svw;
   }
 }
+
+/* @keyframes scaleFromTop {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
+.description:not(.pHidden) {
+  animation: scaleFromTop 0.5s ease-in-out;
+  max-height: 1000px;
+} */

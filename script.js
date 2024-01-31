@@ -1,7 +1,7 @@
-document.getElementById("linkedin").addEventListener("click", () => {
+document.getElementById("linkedinLink").addEventListener("click", () => {
   window.open("https://www.linkedin.com/in/markvarga21/", "_blank");
 });
-document.getElementById("github").addEventListener("click", () => {
+document.getElementById("githubLink").addEventListener("click", () => {
   window.open("https://github.com/markvarga21", "_blank");
 });
 
