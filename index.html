@@ -169,7 +169,7 @@
             </svg>
           </div>
           <div class="description">Application developments which invole using backend technologies like Spring Boot, Flask for creating comprehensive REST API's.</div>
-          <div class="projectCount">7 PROJECTS</div>
+          <div class="projectCount" onclick="openProjectCategory(event)">7 PROJECTS</div>
         </div>
         <div class="areaCard">
           <div class="title">
@@ -179,7 +179,7 @@
             </svg>
           </div>
           <div class="description">Client side apps where I've used many well known frameworks and technology stacks like ReactJS, TailwindCSS and many others.</div>
-          <div class="projectCount">7 PROJECTS</div>
+          <div class="projectCount" onclick="openProjectCategory(event)">7 PROJECTS</div>
         </div>
         <div class="areaCard">
           <div class="title ml">
@@ -200,7 +200,7 @@
             </svg>
           </div>
           <div class="description">I've made some applications which covers the most part of machine learning, for example reinforcement learning, deep learning, supervised- and unsupervised learning.</div>
-          <div class="projectCount">3 PROJECTS</div>
+          <div class="projectCount" onclick="openProjectCategory(event)">3 PROJECTS</div>
         </div>
       </div>
       <div id="introduction">
@@ -303,160 +303,291 @@
         </div>
       </div>
     </div>
+
     <div id="projects">
-      <div class="inner">
-        <div id="studentManager" class="projectCard">
-          <div class="projectImage">
-            <img src="./images/studentManagerStock.jpg" alt="Student manager" />
+      <div class="title">Projects</div>
+      <div class="options">
+        <div class="option projectActive" id="backend" onclick="changeProject(event)">Backend</div>
+        <div class="option" id="frontend" onclick="changeProject(event)">Frontend</div>
+        <div class="option" id="ml" onclick="changeProject(event)">ML</div>
+      </div>
+      <div id="backendProjects" class="projectContent">
+        <div class="outerProject">
+          <div class="mProject" onclick="openDescription(event)">
+            <div class="firstPart">
+              <img src="./images/studentManagerStock.jpg" alt="Student manager" />
+              <p>Student manager</p>
+            </div>
+            <img class="arrowIcon" src="./images/downArrow.png" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
           </div>
-          <div class="projectTitle">Student manager</div>
-          <div class="description">
-            It is a fullstack application which uses Spring Boot along with
-            React JS and Tailwind CSS. The application allows authenticated
-            persons to add users and also to validate their data, based on
-            their ID card. For this, it uses Azure’s Form Recognizer. Also, the
-            application is partially tested using Mockito.
-          </div>
-          <div class="tags">
-            <div class="tag">SpringBoot</div>
-            <div class="tag">MySQL</div>
-            <div class="tag">Azure</div>
-            <div class="tag">ReactJS</div>
-            <div class="tag">TailwindCSS</div>
-          </div>
-        </div>
-        <div id="todoApplication" class="projectCard">
-          <div class="projectImage">
-            <img src="./images/todoStock.jpg" alt="Todo application" />
-          </div>
-          <div class="projectTitle">TODO application</div>
-          <div class="description">
-            This application is a fullstack TODO application where at the
-            backend I’ve used Spring Boot and at the frontend React JS
-            (with Chakra UI component library). The application allows all the
-            CRUD operations for the TODO items. It also uses Spring Secu-
-            rity (authentication and authorization). Design and architectural
-            principles applied.
-          </div>
-          <div class="tags">
-            <div class="tag">SpringBoot</div>
-            <div class="tag">SpringSecurity</div>
-            <div class="tag">ReactJS</div>
-            <div class="tag">ChakraUI</div>
+          <div class="description pHidden">
+            <p>It is a fullstack application which uses Spring Boot along with
+              React JS and Tailwind CSS. The application allows authenticated
+              persons to add users and also to validate their data, based on
+              their ID card. For this, it uses Azure’s Form Recognizer. Also, the
+              application is partially tested using Mockito.</p>
+              <div class="tags">
+                <div class="tag">SpringBoot</div>
+                <div class="tag">MySQL</div>
+                <div class="tag">Azure</div>
+                <div class="tag">ReactJS</div>
+                <div class="tag">TailwindCSS</div>
+              </div>
           </div>
         </div>
-        <div id="racingGame" class="projectCard">
-          <div class="projectImage">
-            <img src="./images/racingGameStock.jpg" alt="Racing game" />
+        <div class="outerProject">
+          <div class="mProject" onclick="openDescription(event)">
+            <div class="firstPart">
+              <img src="./images/todoStock.jpg" alt="Todo application" />
+              <p>Todo application</p>
+            </div>
+            <img class="arrowIcon" src="./images/downArrow.png" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
           </div>
-          <div class="projectTitle">Racing game</div>
-          <div class="description">
-            This little game was made for a class in my bachelor’s degree, by
-            my collegue and me. It is a simple game, where a car is racing on
-            a track, but not by using exact commands, but by reinforcement
-            learning. This feature is implemented using Unity’s reinforcement
-            learning featureset.
-          </div>
-          <div class="tags">
-            <div class="tag">ReinforcementLearning</div>
-            <div class="tag">Unity3D</div>
+          <div class="description pHidden">
+            <p>This application is a fullstack TODO application where at the
+              backend I’ve used Spring Boot and at the frontend React JS
+              (with Chakra UI component library). The application allows all the
+              CRUD operations for the TODO items. It also uses Spring Secu-
+              rity (authentication and authorization). Design and architectural
+              principles applied.</p>
+              <div class="tags">
+                <div class="tag">SpringBoot</div>
+                <div class="tag">SpringSecurity</div>
+                <div class="tag">ReactJS</div>
+                <div class="tag">ChakraUI</div>
+              </div>
           </div>
         </div>
-        <div id="gameTrader" class="projectCard">
-          <div class="projectImage">
-            <img src="./images/gameTraderStock.jpg" alt="Game trader" />
+        <div class="outerProject">
+          <div class="mProject" onclick="openDescription(event)">
+            <div class="firstPart">
+              <img src="./images/gameTraderStock.jpg" alt="Game trader image" />
+              <p>Game trader</p>
+            </div>
+            <img class="arrowIcon" src="./images/downArrow.png" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
           </div>
-          <div class="projectTitle">Game trader</div>
-          <div class="description">
-            This application is partially implemented, yet it is functional. It
+          <div class="description pHidden">
+            <p>This application is partially implemented, yet it is functional. It
             uses the IGDB API for fetching games. These games are then
             used for trading purposes, along the applications users. The ap-
             plication also provides minor chat support which is based on
-            HTTP protocol.
-          </div>
-          <div class="tags">
-            <div class="tag">SpringBoot</div>
-            <div class="tag">ReactJS</div>
-            <div class="tag">API</div>
-          </div>
-        </div>
-        <div id="zohoPeopleHelper" class="projectCard">
-          <div class="projectImage">
-            <img src="./images/zohoPeopleHelperStock.jpg" alt="Zoho People helper" />
-          </div>
-          <div class="projectTitle">Zoho People helper</div>
-          <div class="description">
-            This project was made at a company named
-            The It Solutions Bv., where I was an back-
-            end intern developer. This eases the steps
-            of adding time stamps to Zoho People. It
-            communicates with Zoho People API, and
-            is partially tested. It also has a frontend
-            (written in React JS) and a backend (using
-            Spring Boot).
-          </div>
-          <div class="tags">
-            <div class="tag">SpringBoot</div>
-            <div class="tag">ReactJS</div>
-            <div class="tag">API</div>
+            HTTP protocol.</p>
+              <div class="tags">
+                <div class="tag">SpringBoot</div>
+                <div class="tag">ReactJS</div>
+                <div class="tag">API</div>
+              </div>
           </div>
         </div>
-        <div id="imageEditor" class="projectCard">
-          <div class="projectImage">
-            <img src="./images/imageEditorStock.jpg" alt="Image editor" />
+        <div class="outerProject">
+          <div class="mProject" onclick="openDescription(event)">
+            <div class="firstPart">
+              <img src="./images/zohoPeopleHelperStock.jpg" alt="Zoho People application image" />
+              <p>Zoho People helper</p>
+            </div>
+            <img class="arrowIcon" src="./images/downArrow.png" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
           </div>
-          <div class="projectTitle">Image editor</div>
-          <div class="description">
-            It is basically a backend application written
-            in Python using Flask, Pillow and other
-            packages where users can enhance their
-            photos (contrast, brightness etc.). In this
-            projects my teammates (they made the
-            frontend) and I (I made the backend) had
-            worked in sprints.
-          </div>
-          <div class="tags">
-            <div class="tag">Scrum</div>
-            <div class="tag">Python</div>
-            <div class="tag">Flask</div>
-            <div class="tag">HTML</div>
-            <div class="tag">CSS</div>
-            <div class="tag">Figma</div>
+          <div class="description pHidden">
+            <p>This project was made at a company named
+              The It Solutions Bv., where I was an back-
+              end intern developer. This eases the steps
+              of adding time stamps to Zoho People. It
+              communicates with Zoho People API, and
+              is partially tested. It also has a frontend
+              (written in React JS) and a backend (using
+              Spring Boot).</p>
+              <div class="tags">
+                <div class="tag">SpringBoot</div>
+                <div class="tag">ReactJS</div>
+                <div class="tag">API</div>
+              </div>
           </div>
         </div>
-        <div id="ticketingService" class="projectCard">
-          <div class="projectImage">
-            <img src="./images/ticketingServiceStock.jpg" alt="Ticketing service" />
+        <div class="outerProject">
+          <div class="mProject" onclick="openDescription(event)">
+            <div class="firstPart">
+              <img src="./images/imageEditorStock.jpg" alt="Image editor image" />
+              <p>Image editor</p>
+            </div>
+            <img class="arrowIcon" src="./images/downArrow.png" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
           </div>
-          <div class="projectTitle">Ticketing service</div>
-          <div class="description">
-            It is basically a backend application written
-            in Python using Flask, Pillow and other
-            packages where users can enhance their
-            photos (contrast, brightness etc.). In this
-            projects my teammates (they made the
-            frontend) and I (I made the backend) had
-            worked in sprints.
+          <div class="description pHidden">
+            <p>It is basically a backend application written
+              in Python using Flask, Pillow and other
+              packages where users can enhance their
+              photos (contrast, brightness etc.). In this
+              projects my teammates (they made the
+              frontend) and I (I made the backend) had
+              worked in sprints.</p>
+              <div class="tags">
+                <div class="tag">Scrum</div>
+                <div class="tag">Python</div>
+                <div class="tag">Flask</div>
+                <div class="tag">HTML</div>
+                <div class="tag">CSS</div>
+                <div class="tag">Figma</div>
+              </div>
           </div>
-          <div class="tags">
-            <div class="tag">SpringFramework</div>
-            <div class="tag">SpringShell</div>
-            <div class="tag">Mockito</div>
-            <div class="tag">CLI</div>
+        </div>
+        <div class="outerProject">
+          <div class="mProject" onclick="openDescription(event)">
+            <div class="firstPart">
+              <img src="./images/ticketingServiceStock.jpg" alt="Ticketing service image" />
+              <p>Ticketing service</p>
+            </div>
+            <img class="arrowIcon" src="./images/downArrow.png" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
+          </div>
+          <div class="description pHidden">
+            <p>It is basically a backend application written
+              in Python using Flask, Pillow and other
+              packages where users can enhance their
+              photos (contrast, brightness etc.). In this
+              projects my teammates (they made the
+              frontend) and I (I made the backend) had
+              worked in sprints.</p>
+              <div class="tags">
+                <div class="tag">SpringFramework</div>
+                <div class="tag">SpringShell</div>
+                <div class="tag">Mockito</div>
+                <div class="tag">CLI</div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div id="frontendProjects" class="projectContent hidden">
+        <div class="outerProject">
+          <div class="mProject" onclick="openDescription(event)">
+            <div class="firstPart">
+              <img src="./images/studentManagerStock.jpg" alt="Student manager" />
+              <p>Student manager</p>
+            </div>
+            <img class="arrowIcon" src="./images/downArrow.png" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
+          </div>
+          <div class="description pHidden">
+            <p>It is a fullstack application which uses Spring Boot along with
+              React JS and Tailwind CSS. The application allows authenticated
+              persons to add users and also to validate their data, based on
+              their ID card. For this, it uses Azure’s Form Recognizer. Also, the
+              application is partially tested using Mockito.</p>
+              <div class="tags">
+                <div class="tag">SpringBoot</div>
+                <div class="tag">MySQL</div>
+                <div class="tag">Azure</div>
+                <div class="tag">ReactJS</div>
+                <div class="tag">TailwindCSS</div>
+              </div>
+          </div>
+        </div>
+        <div class="outerProject">
+          <div class="mProject" onclick="openDescription(event)">
+            <div class="firstPart">
+              <img src="./images/todoStock.jpg" alt="Todo application" />
+              <p>Todo application</p>
+            </div>
+            <img class="arrowIcon" src="./images/downArrow.png" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
+          </div>
+          <div class="description pHidden">
+            <p>This application is a fullstack TODO application where at the
+              backend I’ve used Spring Boot and at the frontend React JS
+              (with Chakra UI component library). The application allows all the
+              CRUD operations for the TODO items. It also uses Spring Secu-
+              rity (authentication and authorization). Design and architectural
+              principles applied.</p>
+              <div class="tags">
+                <div class="tag">SpringBoot</div>
+                <div class="tag">SpringSecurity</div>
+                <div class="tag">ReactJS</div>
+                <div class="tag">ChakraUI</div>
+              </div>
+          </div>
+        </div>
+        <div class="outerProject">
+          <div class="mProject" onclick="openDescription(event)">
+            <div class="firstPart">
+              <img src="./images/gameTraderStock.jpg" alt="Game trader image" />
+              <p>Game trader</p>
+            </div>
+            <img class="arrowIcon" src="./images/downArrow.png" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
+          </div>
+          <div class="description pHidden">
+            <p>This application is partially implemented, yet it is functional. It
+            uses the IGDB API for fetching games. These games are then
+            used for trading purposes, along the applications users. The ap-
+            plication also provides minor chat support which is based on
+            HTTP protocol.</p>
+              <div class="tags">
+                <div class="tag">SpringBoot</div>
+                <div class="tag">ReactJS</div>
+                <div class="tag">API</div>
+              </div>
+          </div>
+        </div>
+        <div class="outerProject">
+          <div class="mProject" onclick="openDescription(event)">
+            <div class="firstPart">
+              <img src="./images/zohoPeopleHelperStock.jpg" alt="Zoho People application image" />
+              <p>Zoho People helper</p>
+            </div>
+            <img class="arrowIcon" src="./images/downArrow.png" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
+          </div>
+          <div class="description pHidden">
+            <p>This project was made at a company named
+              The It Solutions Bv., where I was an back-
+              end intern developer. This eases the steps
+              of adding time stamps to Zoho People. It
+              communicates with Zoho People API, and
+              is partially tested. It also has a frontend
+              (written in React JS) and a backend (using
+              Spring Boot).</p>
+              <div class="tags">
+                <div class="tag">SpringBoot</div>
+                <div class="tag">ReactJS</div>
+                <div class="tag">API</div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div id="mlProjects" class="projectContent hidden">
+        <div class="outerProject">
+          <div class="mProject" onclick="openDescription(event)">
+            <div class="firstPart">
+              <img src="./images/racingGameStock.jpg" alt="Racing game image" />
+              <p>Racing game</p>
+            </div>
+            <img class="arrowIcon" src="./images/downArrow.png" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
+          </div>
+          <div class="description pHidden">
+            <p>This little game was made for a class in my bachelor’s degree, by
+              my collegue and me. It is a simple game, where a car is racing on
+              a track, but not by using exact commands, but by reinforcement
+              learning. This feature is implemented using Unity’s reinforcement
+              learning featureset.</p>
+              <div class="tags">
+                <div class="tag">ReinforcementLearning</div>
+                <div class="tag">Unity3D</div>
+              </div>
+          </div>
+        </div>
+        <div class="outerProject">
+          <div class="mProject" onclick="openDescription(event)">
+            <div class="firstPart">
+              <img src="./images/opticalResearchStock.jpg" alt="Optical research disk image" />
+              <p>Optical disk data quality</p>
+            </div>
+            <img class="arrowIcon" src="./images/downArrow.png" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
+          </div>
+          <div class="description pHidden">
+            <p>In this research, I've developed a binary classification model, which can predict the data quality of an optical disk based on some pictures taken of its back side, with a precision over 70%. While developing, I've combined several machine learning tehcnologies like scikit-learn, keras and many others.</p>
+              <div class="tags">
+                <div class="tag">SpringBoot</div>
+                <div class="tag">SpringSecurity</div>
+                <div class="tag">ReactJS</div>
+                <div class="tag">ChakraUI</div>
+              </div>
           </div>
         </div>
       </div>
     </div>
-    <div id="mProjects">
-      <div class="mProject">1</div>
-      <div class="mProject">1</div>
-      <div class="mProject">1</div>
-      <div class="mProject">1</div>
-      <div class="mProject">1</div>
-      <div class="mProject">1</div>
-      <div class="mProject">1</div>
-    </div>
-    <!-- <button id="startStop" class="start" onclick="startStopAnimation(event)">Start animation</button> -->
     <div id="contact">
       <div class="title">Contact me</div>
       <div class="description">Let's get this conversation started! Tell me a bit about yourself, and<br>I'll get in touch with you as soon as possible.</div>

@@ -104,53 +104,6 @@ function scrollToTop() {
   removeAllActive();
 }
 
-const scroller = document.getElementById("projects");
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  addAnimation();
-}
-
-function addAnimation() {
-  scroller.setAttribute("data-animated", true);
-  const scrollerInner = document.querySelector(".inner");
-  const scrollerContent = Array.from(scrollerInner.children);
-
-  scrollerContent.forEach((item) => {
-    const duplicatedItem = item.cloneNode(true);
-    duplicatedItem.setAttribute("area-hidden", true);
-    scrollerInner.appendChild(duplicatedItem);
-  });
-}
-
-const startStop = document.getElementById("startStop");
-function startStopAnimation(event) {
-  const status = event.target.classList[0];
-  if (status === "start") {
-    startStop.classList.remove("start");
-    startStop.classList.add("stop");
-    startStop.innerHTML = "Stop animation";
-    document.querySelector("#projects .inner").style.animationPlayState =
-      "running";
-  } else if (status === "stop") {
-    startStop.classList.remove("stop");
-    startStop.classList.add("start");
-    startStop.innerHTML = "Start animation";
-    document.querySelector("#projects .inner").style.animationPlayState =
-      "paused";
-  }
-}
-
-document.querySelector("#projects .inner").addEventListener("mouseover", () => {
-  document.querySelector("#projects .inner").style.animationPlayState =
-    "paused";
-});
-
-document
-  .querySelector("#projects .inner")
-  .addEventListener("mouseleave", () => {
-    document.querySelector("#projects .inner").style.animationPlayState =
-      "running";
-  });
-
 function emptyFields() {
   document.getElementById("contactFirstName").value = "";
   document.getElementById("contactLastName").value = "";
@@ -196,4 +149,86 @@ function showMobileNav() {
   } else {
     nav.style.display = "none";
   }
+}
+
+function removeProjectActive() {
+  const projects = document.querySelectorAll(".option");
+  for (let i = 0; i < projects.length; i++) {
+    projects[i].classList.remove("projectActive");
+  }
+}
+
+function hideProjects() {
+  document.getElementById("backendProjects").classList.add("hidden");
+  document.getElementById("frontendProjects").classList.add("hidden");
+  document.getElementById("mlProjects").classList.add("hidden");
+}
+
+function activateProject(id) {
+  hideProjects();
+  if (id === "backend") {
+    console.log("backend");
+    document.getElementById("backendProjects").classList.remove("hidden");
+  } else if (id === "frontend") {
+    console.log("frontend");
+    document.getElementById("frontendProjects").classList.remove("hidden");
+  } else if (id === "ml") {
+    console.log("ml");
+    document.getElementById("mlProjects").classList.remove("hidden");
+  }
+}
+function hideAllDescriptions() {
+  const descriptions = document.querySelectorAll("#projects .description");
+  for (let i = 0; i < descriptions.length; i++) {
+    descriptions[i].classList.add("pHidden");
+  }
+}
+
+function changeProject(event) {
+  const id = event.target.id;
+  const element = document.getElementById(id);
+  removeProjectActive();
+  element.classList.add("projectActive");
+  activateProject(id);
+  hideAllDescriptions();
+}
+
+function openDescription(event) {
+  const actual = event.target;
+  element = actual.parentElement.querySelectorAll(".description")[0];
+  const status = element.classList.contains("pHidden");
+  if (status) {
+    element.classList.remove("pHidden");
+  } else {
+    element.classList.add("pHidden");
+  }
+}
+
+function openDescriptionWithArrow(event) {
+  const actual = event.target;
+  const element =
+    actual.parentElement.parentElement.querySelectorAll(".description")[0];
+  const status = element.classList.contains("pHidden");
+  if (status) {
+    element.classList.remove("pHidden");
+  } else {
+    element.classList.add("pHidden");
+  }
+}
+
+function openProjectCategory(event) {
+  const element = event.target.parentElement;
+  const category = element.querySelectorAll(".title p")[0].innerHTML;
+  switch (category) {
+    case "Backend":
+      document.getElementById("backend").click();
+      break;
+    case "Frontend":
+      document.getElementById("frontend").click();
+      break;
+    case "Machine Learning":
+      document.getElementById("ml").click();
+      break;
+  }
+  document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
 }
