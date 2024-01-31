@@ -210,8 +210,8 @@ function openDescriptionWithArrow(event) {
   const actual = event.target;
   const element =
     actual.parentElement.parentElement.querySelectorAll(".description")[0];
-  const status = element.classList.contains("pHidden");
-  if (status) {
+  const hidden = element.classList.contains("pHidden");
+  if (hidden) {
     element.classList.remove("pHidden");
   } else {
     element.classList.add("pHidden");
@@ -219,6 +219,7 @@ function openDescriptionWithArrow(event) {
 }
 
 function openProjectCategory(event) {
+  console.log("openProjectCategory");
   const element = event.target.parentElement;
   const category = element.querySelectorAll(".title p")[0].innerHTML;
   switch (category) {
