@@ -175,6 +175,7 @@ body {
   padding: 1em;
   border-radius: 50%;
   animation: scaleUp 0.2s forwards;
+  z-index: 2;
 }
 
 #scrollUp:hover {
