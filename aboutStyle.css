@@ -18,6 +18,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 10px;
   height: 20svh;
+  height: fit-content;
 }
 
 .areaCard .title {
@@ -90,10 +91,22 @@
   margin-bottom: 1em;
 }
 
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #6ef3a3;
+  }
+}
+
 #introduction .title spam {
   color: #6ef3a3;
   font-weight: 800;
   font-size: 50pt;
+  border-right: 0.1em solid #6ef3a3;
+  animation: blink-caret 1s step-end infinite;
 }
 
 #introduction .introductionContent .introQuote {

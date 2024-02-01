@@ -193,8 +193,6 @@ function changeProject(event) {
   hideAllDescriptions();
 }
 
-function flipArrow() {}
-
 function openDescription(event) {
   const actual = event.target;
   element = actual.parentElement.querySelectorAll(".description")[0];
@@ -210,6 +208,19 @@ function openDescriptionWithArrow(event) {
   const actual = event.target;
   const element =
     actual.parentElement.parentElement.querySelectorAll(".description")[0];
+  const hidden = element.classList.contains("pHidden");
+  if (hidden) {
+    element.classList.remove("pHidden");
+  } else {
+    element.classList.add("pHidden");
+  }
+}
+
+function openDescriptionWithTitle(event) {
+  const element =
+    event.target.parentElement.parentElement.parentElement.querySelectorAll(
+      ".description"
+    )[0];
   const hidden = element.classList.contains("pHidden");
   if (hidden) {
     element.classList.remove("pHidden");

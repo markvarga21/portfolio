@@ -33,6 +33,7 @@
   padding-bottom: 1em;
   width: 100%;
   text-align: center;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .option:hover {
@@ -42,11 +43,13 @@
 .option:first-child {
   border-top-left-radius: 1em;
   border-bottom-left-radius: 1em;
+  border-right: 1px solid rgb(86, 86, 86);
 }
 
 .option:last-child {
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
+  border-left: 1px solid rgb(86, 86, 86);
 }
 
 .projectActive {
@@ -78,6 +81,14 @@
   border-radius: 25px;
   height: fit-content;
   max-height: 200px;
+  border: 1px solid rgb(86, 86, 86);
+  transition: box-shadow 0.15s ease-in-out;
+  z-index: 2;
+}
+
+.mProject:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px #6ef3a3; /* Adjust color and blur radius as needed */
 }
 
 .hidden {
@@ -159,12 +170,22 @@
 
 #projects img.arrowIcon {
   user-select: none;
+  max-width: 20px;
+  max-height: 20px;
 }
 
 @media screen and (max-width: 1100px) {
   #projects img.arrowIcon {
     width: 4svw;
     height: 4svw;
+  }
+
+  .option:first-child {
+    border-right: 1px solid rgb(86, 86, 86);
+  }
+
+  .option:last-child {
+    border-left: 1px solid rgb(86, 86, 86);
   }
 
   #projects p {
@@ -177,6 +198,20 @@
     width: 2svw;
     height: 2svw;
   }
+}
+
+.repoLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2em;
+}
+
+.repoLink a {
+  text-decoration: none;
+  color: #878787;
+  font-family: "Dm Sans", sans-serif;
+  text-decoration: underline;
 }
 
 /* @keyframes scaleFromTop {

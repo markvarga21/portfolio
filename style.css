@@ -24,13 +24,15 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 15em;
+  height: calc(100svh - 7em);
 }
 
 #textual {
   display: flex;
   flex-direction: column;
-  padding-left: 3em;
-  padding-top: 8em;
+  padding-left: 1svw;
+  padding-top: 3svh;
 }
 
 .devTag {
@@ -51,7 +53,7 @@ body {
 .subTextual {
   display: flex;
   flex-direction: column;
-  padding-left: 10em;
+  padding-left: 10svw;
 }
 
 .quote p {
@@ -93,9 +95,16 @@ body {
 #reference {
   display: flex;
   gap: 5em;
-  padding-left: 2em;
-  padding-top: 7em;
+  padding-left: 4svw;
+  padding-top: 2svh;
   align-items: flex-end;
+}
+
+@media screen and (min-width: 1700px) {
+  #reference {
+    padding-left: 4svw;
+    padding-top: 15svh;
+  }
 }
 
 .experience,
@@ -132,6 +141,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  padding-right: 2svw;
 }
 
 #profileImage {
@@ -235,11 +245,6 @@ body {
 
   #navigations {
     display: block;
-  }
-
-  #content {
-    flex-direction: column;
-    margin-bottom: 15em;
   }
 
   #textual {
