@@ -139,17 +139,30 @@ body {
 
 #content #image {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   padding-right: 2svw;
 }
 
-#profileImage {
-  position: absolute;
-  object-fit: contain;
-  bottom: 0;
-  width: 100%;
-  position: relative;
+#content #image img {
+  width: 45svw;
+}
+
+.mImage {
+  display: none;
+}
+
+@media screen and (max-height: 600px) {
+  #content #image {
+    width: 40svh;
+    padding-right: 15rem;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
 }
 
 .navActive {
@@ -441,6 +454,17 @@ body {
     padding: 1em;
     border-radius: 50%;
     animation: scaleUp 0.2s forwards;
+  }
+
+  .mImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+
+  .mImage img {
+    width: 100%;
   }
 }
 
