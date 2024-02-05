@@ -217,7 +217,6 @@ body {
 }
 
 #top,
-#navigations,
 .contactMobile,
 #mAreas {
   display: none;
@@ -233,10 +232,44 @@ body {
   justify-content: stretch;
 }
 
+#mNavigations {
+  display: none;
+}
+
 /* ----------------------------------------------------- */
 /* Mobile version */
 
 @media only screen and (max-width: 800px) {
+  #mNavigations {
+    background-color: #1e1e1e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100svh;
+    width: 70svw;
+    display: none;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 2.5rem;
+    padding-top: 7rem;
+  }
+
+  .topLine,
+  .bottomLine {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+  }
+
+  .mNav {
+    text-align: left;
+    background-color: #1e1e1e;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+  }
+
   #introduction,
   #about,
   #contact {
@@ -254,10 +287,6 @@ body {
   }
 
   #top {
-    display: block;
-  }
-
-  #navigations {
     display: block;
   }
 
@@ -303,18 +332,6 @@ body {
   #id {
     display: flex;
     flex-direction: column;
-  }
-
-  #navigations {
-    display: none;
-  }
-
-  #navigations .nav {
-    padding: 1em;
-    text-align: left;
-    background-color: #1e1e1e;
-    color: white;
-    font-family: "Montserrat", sans-serif;
   }
 
   #reference .experience p.years,
@@ -488,10 +505,15 @@ body {
     padding-right: 2em;
   }
 
-  #burgerIcon {
-    font-size: 50pt;
+  #burgerIcon,
+  #xIcon {
     color: white;
-    padding-left: 0.5em;
+    padding: 2em;
+    z-index: 2;
+  }
+
+  #xIcon {
+    display: none;
   }
 
   #navbar {

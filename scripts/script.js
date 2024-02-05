@@ -80,6 +80,8 @@ function handleNavClick(event) {
   addHoverStyleToNav(navId);
   const itemId = navId.replace("Nav", "");
   document.getElementById(itemId).scrollIntoView({ behavior: "smooth" });
+  const mNavigations = document.getElementById("mNavigations");
+  mNavigations.style.display = "none";
 }
 
 function navigateToContact() {
@@ -141,13 +143,20 @@ function moveToContact() {
   document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 }
 
+const burgerIcon = document.getElementById("burgerIcon");
+const closeIcon = document.getElementById("xIcon");
 function showMobileNav() {
-  const nav = document.getElementById("navigations");
+  const nav = document.getElementById("mNavigations");
   const actualState = nav.style.display;
   if (actualState === "none") {
-    nav.style.display = "block";
+    nav.style.display = "flex";
+    burgerIcon.style.display = "none";
+    closeIcon.style.display = "block";
   } else {
+    console.log(closeIcon.style.display);
     nav.style.display = "none";
+    burgerIcon.style.display = "block";
+    closeIcon.style.display = "none";
   }
 }
 
