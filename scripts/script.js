@@ -150,14 +150,15 @@ function showMobileNav() {
   const actualState = nav.style.display;
   if (actualState === "none") {
     nav.style.display = "flex";
-    burgerIcon.style.display = "none";
-    closeIcon.style.display = "block";
   } else {
     console.log(closeIcon.style.display);
     nav.style.display = "none";
-    burgerIcon.style.display = "block";
-    closeIcon.style.display = "none";
   }
+}
+
+function hideMobileNav() {
+  const nav = document.getElementById("mNavigations");
+  nav.style.display = "none";
 }
 
 function removeProjectActive() {

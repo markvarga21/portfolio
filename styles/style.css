@@ -251,7 +251,7 @@ body {
     flex-direction: column;
     gap: 2rem;
     padding-left: 2.5rem;
-    padding-top: 7rem;
+    padding-top: 2.5rem;
   }
 
   .topLine,
@@ -505,15 +505,8 @@ body {
     padding-right: 2em;
   }
 
-  #burgerIcon,
-  #xIcon {
-    color: white;
-    padding: 2em;
-    z-index: 2;
-  }
-
-  #xIcon {
-    display: none;
+  #burgerIcon {
+    padding: 2rem;
   }
 
   #navbar {
