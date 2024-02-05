@@ -143,15 +143,12 @@ function moveToContact() {
   document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 }
 
-const burgerIcon = document.getElementById("burgerIcon");
-const closeIcon = document.getElementById("xIcon");
 function showMobileNav() {
   const nav = document.getElementById("mNavigations");
   const actualState = nav.style.display;
   if (actualState === "none") {
     nav.style.display = "flex";
   } else {
-    console.log(closeIcon.style.display);
     nav.style.display = "none";
   }
 }
