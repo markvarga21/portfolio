@@ -133,7 +133,7 @@ body {
 #radialGradient {
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 450vh;
   pointer-events: none;
 }
 

@@ -15,45 +15,15 @@ document.getElementById("githubMobile").addEventListener("click", () => {
 document.addEventListener("mousemove", function (event) {
   // Get the mouse position
   var mouseX = event.clientX;
-  var mouseY = event.clientY;
+  var mouseY = event.clientY + window.scrollY;
 
-  // Calculate the distance from the mouse to the corners of the screen
-  var distanceToTopLeft = Math.sqrt(mouseX * mouseX + mouseY * mouseY);
-  var distanceToTopRight = Math.sqrt(
-    (window.innerWidth - mouseX) * (window.innerWidth - mouseX) +
-      mouseY * mouseY
-  );
-  var distanceToBottomLeft = Math.sqrt(
-    mouseX * mouseX +
-      (window.innerHeight - mouseY) * (window.innerHeight - mouseY)
-  );
-  var distanceToBottomRight = Math.sqrt(
-    (window.innerWidth - mouseX) * (window.innerWidth - mouseX) +
-      (window.innerHeight - mouseY) * (window.innerHeight - mouseY)
-  );
-
-  // Get the maximum distance
-  var maxDistance = Math.max(
-    distanceToTopLeft,
-    distanceToTopRight,
-    distanceToBottomLeft,
-    distanceToBottomRight
-  );
-
-  // Set the radial gradient radius based on the maximum distance (reducing the intensity)
-  var gradientRadius = maxDistance * 0.35 + "px"; // Adjust the multiplier to control the intensity
-
-  // Set the radial gradient position
   var gradientPosition = mouseX + "px " + mouseY + "px";
-
-  // Apply the radial gradient style to the div with a more blurry effect
   document.getElementById("radialGradient").style.background =
     "radial-gradient(circle " +
-    gradientRadius +
+    "20vw" +
     " at " +
     gradientPosition +
-    ", rgba(135, 135, 135, 0.2), transparent)";
-  document.getElementById("radialGradient").style.filter = "blur(50px)"; // Adjust the blur value as needed
+    ", rgba(135, 135, 135, 0.10), transparent)";
 });
 
 function removeAllActive() {
