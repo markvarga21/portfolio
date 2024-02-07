@@ -13,7 +13,6 @@ document.getElementById("githubMobile").addEventListener("click", () => {
 });
 
 document.addEventListener("mousemove", function (event) {
-  // Get the mouse position
   var mouseX = event.clientX;
   var mouseY = event.clientY + window.scrollY;
 
