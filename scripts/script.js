@@ -49,8 +49,8 @@ function handleNavClick(event) {
   addHoverStyleToNav(navId);
   const itemId = navId.replace("Nav", "");
   document.getElementById(itemId).scrollIntoView({ behavior: "smooth" });
-  const mNavigations = document.getElementById("mNavigations");
-  mNavigations.style.display = "none";
+  // const mNavigations = document.getElementById("mNavigations");
+  // mNavigations.style.display = "none";
 }
 
 function navigateToContact() {
@@ -112,19 +112,18 @@ function moveToContact() {
   document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 }
 
+const boxWidth = $("#mNavigations").width();
 function showMobileNav() {
-  const nav = document.getElementById("mNavigations");
-  const actualState = nav.style.display;
-  if (actualState === "none") {
-    nav.style.display = "flex";
-  } else {
-    nav.style.display = "none";
-  }
+  console.log(boxWidth);
+  $("#mNavigations").animate({
+    width: boxWidth,
+  });
 }
 
 function hideMobileNav() {
-  const nav = document.getElementById("mNavigations");
-  nav.style.display = "none";
+  $("#mNavigations").animate({
+    width: 0,
+  });
 }
 
 function removeProjectActive() {
@@ -143,20 +142,11 @@ function hideProjects() {
 function activateProject(id) {
   hideProjects();
   if (id === "backend") {
-    console.log("backend");
     document.getElementById("backendProjects").classList.remove("hidden");
   } else if (id === "frontend") {
-    console.log("frontend");
     document.getElementById("frontendProjects").classList.remove("hidden");
   } else if (id === "ml") {
-    console.log("ml");
     document.getElementById("mlProjects").classList.remove("hidden");
-  }
-}
-function hideAllDescriptions() {
-  const descriptions = document.querySelectorAll("#projects .description");
-  for (let i = 0; i < descriptions.length; i++) {
-    descriptions[i].classList.add("pHidden");
   }
 }
 
@@ -166,47 +156,37 @@ function changeProject(event) {
   removeProjectActive();
   element.classList.add("projectActive");
   activateProject(id);
-  hideAllDescriptions();
 }
 
-function openDescription(event) {
-  const actual = event.target;
-  element = actual.parentElement.querySelectorAll(".description")[0];
-  const status = element.classList.contains("pHidden");
-  if (status) {
-    element.classList.remove("pHidden");
-  } else {
-    element.classList.add("pHidden");
-  }
+const SLIDE_ANIMATION_TIME = 400;
+function slideDown(event) {
+  $(event.target)
+    .parent()
+    .find(".description")
+    .first()
+    .slideToggle(SLIDE_ANIMATION_TIME);
 }
 
 function openDescriptionWithArrow(event) {
-  const actual = event.target;
-  const element =
-    actual.parentElement.parentElement.querySelectorAll(".description")[0];
-  const hidden = element.classList.contains("pHidden");
-  if (hidden) {
-    element.classList.remove("pHidden");
-  } else {
-    element.classList.add("pHidden");
-  }
+  $(event.target)
+    .parent()
+    .parent()
+    .find(".description")
+    .first()
+    .slideToggle(SLIDE_ANIMATION_TIME);
 }
 
 function openDescriptionWithTitle(event) {
-  const element =
-    event.target.parentElement.parentElement.parentElement.querySelectorAll(
-      ".description"
-    )[0];
-  const hidden = element.classList.contains("pHidden");
-  if (hidden) {
-    element.classList.remove("pHidden");
-  } else {
-    element.classList.add("pHidden");
-  }
+  $(event.target)
+    .parent()
+    .parent()
+    .parent()
+    .find(".description")
+    .first()
+    .slideToggle(SLIDE_ANIMATION_TIME);
 }
 
 function openProjectCategory(event) {
-  console.log("openProjectCategory");
   const element = event.target.parentElement;
   const category = element.querySelectorAll(".title p")[0].innerHTML;
   switch (category) {
