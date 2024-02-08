@@ -233,6 +233,7 @@ body {
 }
 
 #mNavigations {
+  visibility: hidden;
   background-color: #1e1e1e;
   position: absolute;
   top: 0;
@@ -260,6 +261,7 @@ body {
 
 @media only screen and (max-width: 800px) {
   #mNavigations {
+    visibility: hidden;
     background-color: #1e1e1e;
     position: absolute;
     top: 0;
@@ -542,6 +544,7 @@ body {
   }
 
   #mNavigations {
+    visibility: hidden;
     background-color: #1e1e1e;
     position: absolute;
     top: 0;

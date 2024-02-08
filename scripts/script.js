@@ -49,8 +49,7 @@ function handleNavClick(event) {
   addHoverStyleToNav(navId);
   const itemId = navId.replace("Nav", "");
   document.getElementById(itemId).scrollIntoView({ behavior: "smooth" });
-  // const mNavigations = document.getElementById("mNavigations");
-  // mNavigations.style.display = "none";
+  hideMobileNav();
 }
 
 function navigateToContact() {
@@ -112,18 +111,27 @@ function moveToContact() {
   document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 }
 
+// $(document).ready(function () {
+//   $("#mNavigations").css("width", "0");
+// });
+
 const boxWidth = $("#mNavigations").width();
 function showMobileNav() {
   console.log(boxWidth);
-  $("#mNavigations").animate({
+  $("#mNavigations").css("visibility", "visible").animate({
     width: boxWidth,
   });
 }
 
 function hideMobileNav() {
-  $("#mNavigations").animate({
-    width: 0,
-  });
+  $("#mNavigations").animate(
+    {
+      width: 0,
+    },
+    () => {
+      $(this).css("visibility", "hidden");
+    }
+  );
 }
 
 function removeProjectActive() {
