@@ -164,10 +164,6 @@
   border-radius: 10px;
 }
 
-.pHidden {
-  display: none !important;
-}
-
 #projects img.arrowIcon {
   user-select: none;
   max-width: 20px;
@@ -202,7 +198,7 @@
 
 .repoLink {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding-left: 2em;
 }
@@ -214,18 +210,6 @@
   text-decoration: underline;
 }
 
-/* @keyframes scaleFromTop {
-  0% {
-    transform: scaleY(0);
-    transform-origin: top;
-  }
-  100% {
-    transform: scaleY(1);
-    transform-origin: top;
-  }
+#projects .description {
+  display: none;
 }
-
-.description:not(.pHidden) {
-  animation: scaleFromTop 0.5s ease-in-out;
-  max-height: 1000px;
-} */
