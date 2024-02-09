@@ -25,28 +25,8 @@ document.addEventListener("mousemove", function (event) {
     ", rgba(135, 135, 135, 0.10), transparent)";
 });
 
-function removeAllActive() {
-  document.getElementById("home").classList.remove("active");
-  document.getElementById("about").classList.remove("active");
-  document.getElementById("projects").classList.remove("active");
-  document.getElementById("contact").classList.remove("active");
-}
-
-function addHoverStyleToNav(id) {
-  document.getElementById(id).classList.add("navActive");
-}
-
-const navs = ["mainNav", "aboutNav", "projectsNav", "contactNav"];
-function removeAllActive() {
-  for (let i = 0; i < navs.length; i++) {
-    document.getElementById(navs[i]).classList.remove("navActive");
-  }
-}
-
 function handleNavClick(event) {
   const navId = event.target.id;
-  removeAllActive();
-  addHoverStyleToNav(navId);
   const itemId = navId.replace("Nav", "");
   document.getElementById(itemId).scrollIntoView({ behavior: "smooth" });
   hideMobileNav();
@@ -62,7 +42,6 @@ window.addEventListener("scroll", function () {
     scrollUp.style.display = "block";
     scrollUp.classList.add("scaleUp");
   } else if (window.pageYOffset < 50) {
-    removeAllActive();
   } else {
     scrollUp.style.display = "none";
     scrollUp.classList.remove("scaleUp");
@@ -71,7 +50,6 @@ window.addEventListener("scroll", function () {
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
-  removeAllActive();
 }
 
 function emptyFields() {
@@ -110,10 +88,6 @@ function sendEmail(event) {
 function moveToContact() {
   document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 }
-
-// $(document).ready(function () {
-//   $("#mNavigations").css("width", "0");
-// });
 
 const boxWidth = $("#mNavigations").width();
 function showMobileNav() {

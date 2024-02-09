@@ -41,21 +41,12 @@
   padding-left: 1.5em;
   padding-right: 1.5em;
   cursor: pointer;
+  padding: 0.5rem;
 }
 
 .links div:hover {
   color: rgb(110, 243, 163);
-  padding: 0;
-}
-
-.links div:hover::before {
-  color: rgb(110, 243, 163);
-  content: "< ";
-}
-
-.links div:hover::after {
-  color: rgb(110, 243, 163);
-  content: " />";
+  border-bottom: 2px solid rgb(110, 243, 163);
 }
 
 .contact {

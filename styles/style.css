@@ -170,11 +170,6 @@ body {
   }
 }
 
-.navActive {
-  color: rgb(110, 243, 163) !important;
-  font-weight: bold;
-}
-
 @keyframes scaleUp {
   from {
     transform: scale(0);
