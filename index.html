@@ -26,9 +26,13 @@
             <path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z" fill="#FFFFFF"></path>
           </svg>
         </div>
-        <div class="mName">
+        <div data-en class="mName">
           <div id="firstName">Mark</div>
           <div id="lastName">Varga</div>
+        </div>
+        <div data-hu class="mName">
+          <div id="lastName">Varga</div>
+          <div id="firstName">Márk</div>
         </div>
       </div>
       <div id="mNavigations">
@@ -43,18 +47,30 @@
           <div class="mNav" id="projectsNav" onclick="handleNavClick(event)">Projects</div>
           <div class="mNav" id="contactNav" onclick="handleNavClick(event)">Contact</div>
         </div>
+        <div class="languageChange">
+          <div class="enLabel" onclick="handleEnClick()">EN</div>
+          <div class="huLabel" onclick="handleHuClick()">HU</div>
+        </div>
       </div>
     </div>
     <div id="navbar">
       <div class="name">
-        <div id="firstName">Mark</div>
-        <div id="lastName">Varga</div>
+        <div data-en id="firstName">Mark</div>
+        <div data-en id="lastName">Varga</div>
+
+        <div data-hu id="lastName">Varga</div>
+        <div data-hu id="firstName">Márk</div>
       </div>
       <div class="links">
-        <div id="mainNav" onclick="handleNavClick(event)" class="navActive">Home</div>
-        <div id="aboutNav" onclick="handleNavClick(event)">About</div>
-        <div id="projectsNav" onclick="handleNavClick(event)">Projects</div>
-        <div id="contactNav" onclick="handleNavClick(event)">Contact</div>
+        <div id="mainNav" data-en onclick="handleNavClick(event)" class="navActive">Home</div>
+        <div id="aboutNav" data-en onclick="handleNavClick(event)">About</div>
+        <div id="projectsNav" data-en onclick="handleNavClick(event)">Projects</div>
+        <div id="contactNav" data-en onclick="handleNavClick(event)">Contact</div>
+
+        <div id="mainNav" data-hu onclick="handleNavClick(event)" class="navActive">Kezdőlap</div>
+        <div id="aboutNav" data-hu onclick="handleNavClick(event)">Rólam</div>
+        <div id="projectsNav" data-hu onclick="handleNavClick(event)">Projektek</div>
+        <div id="contactNav" data-hu onclick="handleNavClick(event)">Elérhetőség</div>
       </div>
       <div class="contact">
         <div id="linkedin">
@@ -103,30 +119,45 @@
               />
           </svg>
         </div>
+        <div class="languageChange">
+          <div class="enLabel" onclick="handleEnClick()">EN</div>
+          <div class="huLabel" onclick="handleHuClick()">HU</div>
+        </div>
       </div>
     </div>
     <div id="content">
       <div id="textual">
         <div class="subTextual">
-          <div class="devTag">FullStack Developer</div>
-          <div class="quote">
+          <div data-en class="devTag">FullStack Developer</div>
+          <div data-hu class="devTag">FullStack szoftverfejlesztő</div>
+          <div data-en class="quote">
             <p>First, solve the problem.</p>
             <p>Then, write the code.</p>
           </div>
+          <div data-hu class="quote">
+            <p>Először old meg a problémát.</p>
+            <p>Utánna, írd meg a kódot.</p>
+          </div>
           <div class="quoteAuthor">- John Johnson</div>
-          <div class="subQuote">I make custom made software applications,<br />and
+          <div data-en class="subQuote">I make custom made software applications,<br />and
             I love what I do.
           </div>
-          <div class="discussion" onclick="navigateToContact()">LET'S CHAT!</div>
+          <div data-hu class="subQuote">Egyedileg elkészített szoftvereket készítek,<br />és
+            szeretem amit csinálok.
+          </div>
+          <div data-en class="discussion" onclick="navigateToContact()">LET'S CHAT!</div>
+          <div data-hu class="discussion" onclick="navigateToContact()">BESZÉLGESSÜNK!</div>
         </div>
         <div id="reference">
           <div class="experience">
             <p class="years">3</p>
-            <p class="text">YEARS OF<br>EXPERIENCE</p>
+            <p data-en class="text">YEARS OF<br>EXPERIENCE</p>
+            <p data-hu class="text">ÉV<br>TAPASZTALAT</p>
           </div>
           <div class="projects">
             <p class="projectCount">40</p>
-            <p class="text">PROJECTS COMPLETED<br>COVERING 7 AREAS</p>
+            <p data-en class="text">PROJECTS COMPLETED<br>COVERING 7 AREAS</p>
+            <p data-hu class="text">KÉSZ PROJEKT<br>7 SZAKTERÜLETEN</p>
           </div>
         </div>
       </div>
@@ -138,7 +169,8 @@
       <div id="areas">
         <div class="areaCard">
           <div class="title">
-            <p>Backend</p>
+            <p data-en>Backend</p>
+            <p data-hu>Szerver oldal</p>
             <svg fill="#6EF3A3" height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
               viewBox="0 0 512 512" xml:space="preserve">
               <g>
@@ -185,22 +217,28 @@
               </g>
             </svg>
           </div>
-          <div class="description">Application developments which invole using backend technologies like Spring Boot, Flask for creating comprehensive REST API's.</div>
-          <div class="projectCount" onclick="openProjectCategory(event)">7 PROJECTS</div>
+          <div data-en class="description">Application developments which invole using backend technologies like Spring Boot, Flask for creating comprehensive REST API's.</div>
+          <div data-hu class="description">Szoftvertermékek különböző szerver oldali technológiák felhasználásával, úgy mint Spring Boot vagy Flask.</div>
+          <div data-en class="projectCount" onclick="openProjectCategory(event)">7 PROJECTS</div>
+          <div data-hu class="projectCount" onclick="openProjectCategory(event)">7 PROJEKT</div>
         </div>
         <div class="areaCard">
           <div class="title">
-            <p>Frontend</p>
+            <p data-en>Frontend</p>
+            <p data-hu>Kliens oldal</p>
             <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M7 21H17M6.2 17H17.8C18.9201 17 19.4802 17 19.908 16.782C20.2843 16.5903 20.5903 16.2843 20.782 15.908C21 15.4802 21 14.9201 21 13.8V6.2C21 5.0799 21 4.51984 20.782 4.09202C20.5903 3.71569 20.2843 3.40973 19.908 3.21799C19.4802 3 18.9201 3 17.8 3H6.2C5.0799 3 4.51984 3 4.09202 3.21799C3.71569 3.40973 3.40973 3.71569 3.21799 4.09202C3 4.51984 3 5.07989 3 6.2V13.8C3 14.9201 3 15.4802 3.21799 15.908C3.40973 16.2843 3.71569 16.5903 4.09202 16.782C4.51984 17 5.07989 17 6.2 17Z" stroke="#6EF3A3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
-          <div class="description">Client side apps where I've used many well known frameworks and technology stacks like ReactJS, TailwindCSS and many others.</div>
-          <div class="projectCount" onclick="openProjectCategory(event)">7 PROJECTS</div>
+          <div data-en class="description">Client side apps where I've used many well known frameworks and technology stacks like ReactJS, TailwindCSS and many others.</div>
+          <div data-hu class="description">Kliens oldali alkalmazások napjaink legnépszerűbb keretrendszereinek felhasználásával, mint a React JS és a stilizáláshoz használatos Tailwind CSS.</div>
+          <div data-en class="projectCount" onclick="openProjectCategory(event)">7 PROJECTS</div>
+          <div data-hu class="projectCount" onclick="openProjectCategory(event)">7 PROJEKT</div>
         </div>
         <div class="areaCard">
           <div class="title ml">
-            <p>Machine learning</p>
+            <p data-en>Machine learning</p>
+            <p data-hu>Gépi tanulás</p>
             <svg fill="#6EF3A3" width="30px" height="30px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <style>
@@ -216,30 +254,43 @@
               <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/>
             </svg>
           </div>
-          <div class="description">I've made some applications which covers the most part of machine learning, for example reinforcement learning, deep learning, supervised- and unsupervised learning.</div>
-          <div class="projectCount" onclick="openProjectCategory(event)">3 PROJECTS</div>
+          <div data-en class="description">I've made some applications which cover the most part of machine learning, for example reinforcement learning, deep learning, supervised- and unsupervised learning.</div>
+          <div data-hu class="description">Számos gépi tanuláshoz kapcsolódó területen belüli jártasság, úgy mint mély tanulás, megerősítéses tanulás, illetve felügyelt és nem felügyelt tanulás.</div>
+
+          <div data-en class="projectCount" onclick="openProjectCategory(event)">3 PROJECTS</div>
+          <div data-hu class="projectCount" onclick="openProjectCategory(event)">3 PROJEKT</div>
         </div>
       </div>
       <div id="introduction">
-        <div class="miniTitle">Introduce</div>
-        <div class="title">
+        <div data-en class="miniTitle">Introduce</div>
+        <div data-hu class="miniTitle">Bemutatkozás</div>
+        <div data-en class="title">
           Hello! I am<br>
           <spam>Mark Varga</spam>
+        </div>
+        <div data-hu class="title">
+          Üdv! Az én nevem<br>
+          <spam>Varga Márk</spam>
         </div>
         <div class="mImage">
           <img src="./images/portfolio_image.webp" alt="Mark Varga" />
         </div>
         <div class="introductionContent">
-          <p class="introQuote">"Coding like poetry should be short and concise."</p>
+          <p data-en class="introQuote">"Coding like poetry should be short and concise."</p>
+          <p data-hu class="introQuote">"A programkódnak a költészethez hasonlóan rövidnek és tömörnek kell lennie."</p>
           <p class="author">― Santosh Kalwar</p>
-          <p class="content">
-            I am a fullstack developer with 3 years of experience, who loves to code any custom made application, let it be a professional software product, or just a hobby project of mine. Currently, I am pursuing my master's degree in Computer Science at the University of Debrecen, Hungary. I am keen to learn any new technology and I am always open to new challenges. So, if I got your interest, feel free and contact me! :)
+          <p data-en class="content">
+            I am a fullstack developer with more than 3 years of experience, who loves to code any custom made application, let it be a professional software product, or just a hobby project of mine. Currently, I am pursuing my master's degree in Computer Science at the University of Debrecen, Hungary. I am keen to learn any new technology and I am always open to new challenges. So, if I got your interest, feel free and contact me! :)
+          </p>
+          <p data-hu class="content">
+            Egy fullstack szoftverfejlesztő vagyok több mint 3 év tapasztalattal, aki szívesen kódol le bármilyen alkalmazást, legyen az egy professzionális termék, vagy csupán egy hobbi projekt. Jelenleg a Debreceni Egyetem Programtervező informatikus mesterszakjára járok. Szívesen elsajátítok bármilyen új technológiát, és mindig nyitott vagyok az új kihívásokra. Szóval, ha felkeltettem az érdeklődését, keressen bizalommal! :)
           </p>
         </div>
         <div id="mAreas">
           <div class="areaCard">
             <div class="title">
-              <p>Backend</p>
+              <p data-en>Backend</p>
+              <p data-hu>Szerver oldal</p>
               <svg fill="#6EF3A3" height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                 viewBox="0 0 512 512" xml:space="preserve">
                 <g>
@@ -286,22 +337,28 @@
                 </g>
               </svg>
             </div>
-            <div class="description">Application developments which invole using backend technologies like Spring Boot, Flask for creating comprehensive REST API's.</div>
-            <div class="projectCount">7 PROJECTS</div>
+            <div data-en class="description">Application developments which invole using backend technologies like Spring Boot, Flask for creating comprehensive REST API's.</div>
+            <div data-hu class="description">Szoftvertermékek különböző szerver oldali technológiák felhasználásával, úgy mint Spring Boot vagy Flask.</div>
+            <div data-en class="projectCount">7 PROJECTS</div>
+            <div data-hu class="projectCount">7 PROJEKT</div>
           </div>
           <div class="areaCard">
             <div class="title">
-              <p>Frontend</p>
+              <p data-en>Frontend</p>
+              <p data-hu>Kliens oldal</p>
               <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 21H17M6.2 17H17.8C18.9201 17 19.4802 17 19.908 16.782C20.2843 16.5903 20.5903 16.2843 20.782 15.908C21 15.4802 21 14.9201 21 13.8V6.2C21 5.0799 21 4.51984 20.782 4.09202C20.5903 3.71569 20.2843 3.40973 19.908 3.21799C19.4802 3 18.9201 3 17.8 3H6.2C5.0799 3 4.51984 3 4.09202 3.21799C3.71569 3.40973 3.40973 3.71569 3.21799 4.09202C3 4.51984 3 5.07989 3 6.2V13.8C3 14.9201 3 15.4802 3.21799 15.908C3.40973 16.2843 3.71569 16.5903 4.09202 16.782C4.51984 17 5.07989 17 6.2 17Z" stroke="#6EF3A3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <div class="description">Client side apps where I've used many well known frameworks and technology stacks like ReactJS, TailwindCSS and many others.</div>
-            <div class="projectCount">7 PROJECTS</div>
+            <div data-en class="description">Client side apps where I've used many well known frameworks and technology stacks like ReactJS, TailwindCSS and many others.</div>
+            <div data-hu class="description">Kliens oldali alkalmazások napjaink legnépszerűbb keretrendszerinek felhasználásával, mint a React JS és a stilizáláshoz használatos Tailwind CSS.</div>
+            <div data-en class="projectCount">7 PROJECTS</div>
+            <div data-hu class="projectCount">7 PROJEKT</div>
           </div>
           <div class="areaCard">
             <div class="title ml">
-              <p>Machine learning</p>
+              <p data-en>Machine learning</p>
+              <p data-hu>Gépi tanulás</p>
               <svg fill="#6EF3A3" width="30px" height="30px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg">
                 <path d="M27,24a2.9609,2.9609,0,0,0-1.2854.3008L21.4141,20H18v2h2.5859l3.7146,3.7148A2.9665,2.9665,0,0,0,24,27a3,3,0,1,0,3-3Zm0,4a1,1,0,1,1,1-1A1.0009,1.0009,0,0,1,27,28Z"/>
                 <path d="M27,13a2.9948,2.9948,0,0,0-2.8157,2H18v2h6.1843A2.9947,2.9947,0,1,0,27,13Zm0,4a1,1,0,1,1,1-1A1.0009,1.0009,0,0,1,27,17Z"/>
@@ -310,14 +367,17 @@
                 <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/>
               </svg>
             </div>
-            <div class="description">I've made some applications which covers the most part of machine learning, for example reinforcement learning, deep learning, supervised- and unsupervised learning.</div>
-            <div class="projectCount">3 PROJECTS</div>
+            <div data-en class="description">I've made some applications which covers the most part of machine learning, for example reinforcement learning, deep learning, supervised- and unsupervised learning.</div>
+            <div data-en class="projectCount">3 PROJECTS</div>
+            <div data-hu class="description">Számos gépi tanuláshoz kapcsolódó területen belüli jártasság, úgy mint mély tanulás, megerősítéses tanulás, illetve felügyelt és nem felügyelt tanulás.</div>
+            <div data-hu class="projectCount">3 PROJEKT</div>
           </div>
         </div>
       </div>
     </div>
     <div id="projects">
-      <div class="title">Projects</div>
+      <div data-en class="title">Projects</div>
+      <div data-hu class="title">Projektek</div>
       <div class="options">
         <div class="option projectActive" id="backend" onclick="changeProject(event)">Backend</div>
         <div class="option" id="frontend" onclick="changeProject(event)">Frontend</div>
@@ -328,41 +388,17 @@
           <div class="mProject" onclick="slideDown(event)">
             <div class="firstPart">
               <img onclick="openDescriptionWithTitle(event)" src="./images/studentManagerStock.webp" alt="Student manager" />
-              <p onclick="openDescriptionWithTitle(event)">Student manager</p>
+              <p data-en onclick="openDescriptionWithTitle(event)">Student manager</p>
+              <p data-hu onclick="openDescriptionWithTitle(event)">Hallgató kezelő</p>
             </div>
             <img class="arrowIcon" src="./images/downArrow.webp" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
           </div>
           <div id="studentManager" class="description">
-            <p>It is a fullstack application which uses Spring Boot along with
-              React JS and Tailwind CSS. The application allows authenticated
-              persons to add students and also to validate their data, based on
-              their passport. For this, it uses Azure’s Form Recognizer. Also, the
-              application is partially tested using Mockito.
+            <p data-en>
+              It is a REST API built in Java using Spring Boot, which enables authenticated users to register student's data. It is nearly fully tested with the Mockito framework and is secured using Spring Security. Regarding the automation process, CI/CD pipelines were involved in the development process. Also, it uses Microsoft Azure's AI Vision and Document Intelligence as a third-party API. For the database part, PostgreSQL was mainly used, and Redis for caching purposes. It is deployed on a Red Hat 9 enterprise linux system.
             </p>
-            <div class="tags">
-              <div class="tag">REST API</div>
-              <div class="tag">Java</div>
-              <div class="tag">Spring Boot</div>
-              <div class="tag">MySQL</div>
-              <div class="tag">Azure</div>
-            </div>
-          </div>
-        </div>
-        <div class="outerProject">
-          <div class="mProject" onclick="slideDown(event)">
-            <div class="firstPart">
-              <img onclick="openDescriptionWithTitle(event)" src="./images/todoStock.webp" alt="Todo application" />
-              <p onclick="openDescriptionWithTitle(event)">Todo application</p>
-            </div>
-            <img class="arrowIcon" src="./images/downArrow.webp" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
-          </div>
-          <div class="description">
-            <p>This application is a fullstack TODO application where at the
-              backend I’ve used Spring Boot and at the frontend React JS
-              (with Chakra UI component library). The application allows all the
-              CRUD operations for TODO items. It also uses Spring Secu-
-              rity (authentication and authorization). Design and architectural
-              principles were applied.
+            <p data-hu>
+              Az alkalmazás maga egy REST API, mely Java nyelvben lett megírva, a Spring Boot keretrendszert felhasználva. Az alkalmazás célja a hallgatói adatok mentése és kezelése. Közel teljesen tesztelve van a Mocikito framework segítségével, és biztosítva a Spring Security-vel. Az automatizálási folyamatokat tekintve, CI/CD csővezetékek voltak felhasználva a fejlesztés során. Továbbá, a Microsoft Azure AI Vision és Document Intelligence API-kat használja mint külső forrás. Az adatbázist illetően, főképp PostgreSQL volt használva, valamint Redis cachelési célokra. Az alkalmazás ki van helyezve egy Red Hat 9 linux operációs rendszerre. 
             </p>
             <div class="repoLink">
               <svg
@@ -379,7 +415,56 @@
                   fill="#878787"
                   ></path>
               </svg>
-              <a href="https://github.com/markvarga21/todoApplicationBackend" target="_blank">Repository</a>
+              <a data-en href="https://github.com/markvarga21/studentManager" target="_blank">Repository</a>
+              <a data-hu href="https://github.com/markvarga21/studentManager" target="_blank">Tároló</a>
+            </div>
+            <div class="tags">
+              <div class="tag">REST API</div>
+              <div class="tag">Java</div>
+              <div class="tag">Spring Boot</div>
+              <div class="tag">MySQL</div>
+              <div class="tag">Redis</div>
+              <div class="tag">CI/CD</div>
+              <div class="tag">Mockito</div>
+              <div class="tag">Spring Security</div>
+              <div class="tag">Checkstyle</div>
+              <div class="tag">Azure</div>
+            </div>
+          </div>
+        </div>
+        <div class="outerProject">
+          <div class="mProject" onclick="slideDown(event)">
+            <div class="firstPart">
+              <img onclick="openDescriptionWithTitle(event)" src="./images/todoStock.webp" alt="Todo application" />
+              <p data-en onclick="openDescriptionWithTitle(event)">Todo application</p>
+              <p data-hu onclick="openDescriptionWithTitle(event)">Teendőlista alkalmazás</p>
+            </div>
+            <img class="arrowIcon" src="./images/downArrow.webp" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
+          </div>
+          <div class="description">
+            <p data-en>
+              This is a REST API for a simple Todo application which lets authenticated users to add their daily todos to a list. It was built using Spring Boot and secured with Spring Security.
+            </p>
+            <p data-hu>
+              Ez egy REST API egy Todo alkalmazás számára, amely lehetővé teszi a bejelentkezett felhasználóknak a teendőik felvilét egy listába. Az elkészítés során a Spring Boot keretrendszer volt felhasználva, a Spring Security biztonsági eszköztárával kiegészítve.
+            </p>
+            <div class="repoLink">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="30"
+                height="30"
+                viewBox="0 0 32 32"
+                >
+                <path
+                  fill-rule="evenodd"
+                  d="M 16 4 C 9.371094 4 4 9.371094 4 16 C 4 21.300781 7.4375 25.800781 12.207031 27.386719 C 12.808594 27.496094 13.027344 27.128906 13.027344 26.808594 C 13.027344 26.523438 13.015625 25.769531 13.011719 24.769531 C 9.671875 25.492188 8.96875 23.160156 8.96875 23.160156 C 8.421875 21.773438 7.636719 21.402344 7.636719 21.402344 C 6.546875 20.660156 7.71875 20.675781 7.71875 20.675781 C 8.921875 20.761719 9.554688 21.910156 9.554688 21.910156 C 10.625 23.746094 12.363281 23.214844 13.046875 22.910156 C 13.15625 22.132813 13.46875 21.605469 13.808594 21.304688 C 11.144531 21.003906 8.34375 19.972656 8.34375 15.375 C 8.34375 14.0625 8.8125 12.992188 9.578125 12.152344 C 9.457031 11.851563 9.042969 10.628906 9.695313 8.976563 C 9.695313 8.976563 10.703125 8.65625 12.996094 10.207031 C 13.953125 9.941406 14.980469 9.808594 16 9.804688 C 17.019531 9.808594 18.046875 9.941406 19.003906 10.207031 C 21.296875 8.65625 22.300781 8.976563 22.300781 8.976563 C 22.957031 10.628906 22.546875 11.851563 22.421875 12.152344 C 23.191406 12.992188 23.652344 14.0625 23.652344 15.375 C 23.652344 19.984375 20.847656 20.996094 18.175781 21.296875 C 18.605469 21.664063 18.988281 22.398438 18.988281 23.515625 C 18.988281 25.121094 18.976563 26.414063 18.976563 26.808594 C 18.976563 27.128906 19.191406 27.503906 19.800781 27.386719 C 24.566406 25.796875 28 21.300781 28 16 C 28 9.371094 22.628906 4 16 4 Z"
+                  fill="#878787"
+                  ></path>
+              </svg>
+              <a data-en href="https://github.com/markvarga21/todoApplicationBackend" target="_blank">Repository</a>
+              <a data-hu href="https://github.com/markvarga21/todoApplicationBackend" target="_blank">Tároló</a>
             </div>
             <div class="tags">
               <div class="tag">REST API</div>
@@ -393,15 +478,19 @@
           <div class="mProject" onclick="slideDown(event)">
             <div class="firstPart">
               <img onclick="openDescriptionWithTitle(event)" src="./images/gameTraderStock.webp" alt="Game trader image" />
-              <p onclick="openDescriptionWithTitle(event)">Game trader</p>
+              <p data-en onclick="openDescriptionWithTitle(event)">Game trader</p>
+              <p data-hu onclick="openDescriptionWithTitle(event)">Számítógépes játék cserere-berélő</p>
             </div>
             <img class="arrowIcon" src="./images/downArrow.webp" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
           </div>
           <div class="description">
-            <p>This application is partially implemented, yet it is functional. It
+            <p data-en>This application is partially implemented, yet it is functional. It
               uses the IGDB API for fetching video games. These games are then
               used for trading purposes, along the application's users. The app also provides minor chat support which is based on
               HTTP protocol.
+            </p>
+            <p data-hu>
+              Ezen applikáció részben van lefejlesztve, de ettől még működőképes. Lehetővé teszi a számítógépes játékok csereberéjét a játékosok között. Az IGDB API-ját használja fel a különböző számítógépes játékok adatainak lekérésére. Továbbá, az alkalmazás lehetőséget biztosít a chat használatára is, HTTP protokollt használva.
             </p>
             <div class="repoLink">
               <svg
@@ -418,7 +507,8 @@
                   fill="#878787"
                   ></path>
               </svg>
-              <a href="https://github.com/markvarga21/gameTrader" target="_blank">Repository</a>
+              <a data-en href="https://github.com/markvarga21/gameTrader" target="_blank">Repository</a>
+              <a data-hu href="https://github.com/markvarga21/gameTrader" target="_blank">Tároló</a>
             </div>
             <div class="tags">
               <div class="tag">REST API</div>
@@ -432,19 +522,21 @@
           <div class="mProject" onclick="slideDown(event)">
             <div class="firstPart">
               <img onclick="openDescriptionWithTitle(event)" src="./images/zohoPeopleHelperStock.webp" alt="Zoho People application image" />
-              <p onclick="openDescriptionWithTitle(event)">Zoho People helper</p>
+              <p data-en onclick="openDescriptionWithTitle(event)">Zoho People helper</p>
+              <p data-hu onclick="openDescriptionWithTitle(event)">Zoho People kisegítő</p>
             </div>
             <img class="arrowIcon" src="./images/downArrow.webp" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
           </div>
           <div class="description">
-            <p>This project was made at a company named
-              The It Solutions Bv., where I was a back-
-              end developer intern. This application eases the steps
+            <p data-en>
+              This project was made at a company named
+              TIS Hungary Kft., where I was a backend developer intern. This application eases the steps
               of adding time stamps to Zoho People. It
               communicates with the Zoho People API, and
-              is partially tested. It also has a frontend
-              (written in React JS) and a backend (using
-              Spring Boot).
+              is partially tested. It is written in Spring Boot.
+            </p>
+            <p data-hu>
+              Az alkalmazás szakmai gyakorlatom alatt került elkészítésre a TIS Hungary Kft. magyar cégnél. Ezen API megkönnyíti a Zoho People-hoz kapcsolódó időbélyeg beszúrást a munkavállalók számára. Így, az említett művelethez a Zoho People API-ját használja fel. A program maga a Spring Boot keretrendszert felhasználva került elkészítésre, és részben tesztelve is van a Mockito tesztelési keretrendszer segítségével.
             </p>
             <div class="repoLink">
               <svg
@@ -461,7 +553,8 @@
                   fill="#878787"
                   ></path>
               </svg>
-              <a href="https://github.com/markvarga21/zohoApplicationBackend/tree/dev" target="_blank">Repository</a>
+              <a data-en href="https://github.com/markvarga21/zohoApplicationBackend/tree/dev" target="_blank">Repository</a>
+              <a data-hu href="https://github.com/markvarga21/zohoApplicationBackend/tree/dev" target="_blank">Tároló</a>
             </div>
             <div class="tags">
               <div class="tag">Java</div>
@@ -477,18 +570,22 @@
           <div class="mProject" onclick="slideDown(event)">
             <div class="firstPart">
               <img onclick="openDescriptionWithTitle(event)" src="./images/imageEditorStock.webp" alt="Image editor image" />
-              <p onclick="openDescriptionWithTitle(event)">Image editor</p>
+              <p data-en onclick="openDescriptionWithTitle(event)">Image editor</p>
+              <p data-hu onclick="openDescriptionWithTitle(event)">Képszerkesztő</p>
             </div>
             <img class="arrowIcon" src="./images/downArrow.webp" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
           </div>
           <div class="description">
-            <p>It is basically a backend application written
+            <p data-en>It is basically a backend application written
               in Python using Flask, Pillow and other
               packages, where users can enhance their
               photos (contrast, brightness etc.). In this
-              projects my teammates (they made the
-              frontend) and I (I made the backend) had
+              project my teammates (they made the
+              frontend) and I had
               worked in sprints.
+            </p>
+            <p data-hu>
+              Tulajdonképpen egy szerver oldali alkalmazás Python-ban megírva, a Flask, Pillow és egyéb csomagokat felhasználva. Lehetővé teszi a felhasználók számára képeiknek feljavítását (kontraszt, fényesség stb.). A fejlesztés során a csapatom (ők készítették a kliens oldalt) és jómagam sprint-ekben dolgoztunk.
             </p>
             <div class="repoLink">
               <svg
@@ -505,7 +602,8 @@
                   fill="#878787"
                   ></path>
               </svg>
-              <a href="https://github.com/markvarga21/imageManipulator" target="_blank">Repository</a>
+              <a data-en href="https://github.com/markvarga21/imageManipulator" target="_blank">Repository</a>
+              <a data-hu href="https://github.com/markvarga21/imageManipulator" target="_blank">Tároló</a>
             </div>
             <div class="tags">
               <div class="tag">Scrum</div>
@@ -518,19 +616,20 @@
           <div class="mProject" onclick="slideDown(event)">
             <div class="firstPart">
               <img onclick="openDescriptionWithTitle(event)" src="./images/ticketingServiceStock.webp" alt="Ticketing service image" />
-              <p onclick="openDescriptionWithTitle(event)">Ticketing service</p>
+              <p data-en onclick="openDescriptionWithTitle(event)">Ticketing service</p>
+              <p data-hu onclick="openDescriptionWithTitle(event)">Mozijegy kezelő</p>
             </div>
             <img class="arrowIcon" src="./images/downArrow.webp" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
           </div>
           <div class="description">
-            <p>This application allows users to manage
-              screenings, and other cinema related ser-
-              vices. It is implemented using Spring Frame-
-              work along with Spring Shell, thus providing a
+            <p data-en>This application allows users to manage
+              screenings, and other cinema related services. It is implemented using Spring Framework along with Spring Shell, thus providing a
               command line interface for users.
-              Continuing, the application is tested us-
-              ing Mockito framework. Finally, the coding
-              stytle is validated using rigurous checkstyle rules.
+              Continuing, the application is tested using Mockito framework. Finally, the coding
+              style is validated using rigurous checkstyle rules.
+            </p>
+            <p data-hu>
+              Az applikáció lehetővé teszi vetítések, és egyéb mozihoz kapcsolódó műveletek kezelését. A Spring Framework segítségével lett implementálva, azon belül is a parancssori felületet biztosító Spring Shell-t felhasználva. Az alkalmazás tesztelve van a Mockito keretrendszerrel. Továbbá, a forráskód jólformáltsága egy szigorú checkstyle állománnyal van ellenőrizve.
             </p>
             <div class="repoLink">
               <svg
@@ -547,7 +646,8 @@
                   fill="#878787"
                   ></path>
               </svg>
-              <a href="https://github.com/markvarga21/ticketService" target="_blank">Repository</a>
+              <a data-en href="https://github.com/markvarga21/ticketService" target="_blank">Repository</a>
+              <a data-hu href="https://github.com/markvarga21/ticketService" target="_blank">Tároló</a>
             </div>
             <div class="tags">
               <div class="tag">Java</div>
@@ -565,42 +665,20 @@
           <div class="mProject" onclick="slideDown(event)">
             <div class="firstPart">
               <img onclick="openDescriptionWithTitle(event)" src="./images/studentManagerStock.webp" alt="Student manager" />
-              <p onclick="openDescriptionWithTitle(event)">Student manager</p>
+              <p data-en onclick="openDescriptionWithTitle(event)">Student manager</p>
+              <p data-hu onclick="openDescriptionWithTitle(event)">Hallgató kezelő</p>
             </div>
             <img class="arrowIcon" src="./images/downArrow.webp" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
           </div>
           <div class="description">
-            <p>It is a fullstack application which uses Spring Boot along with
+            <p data-en>It is a fullstack application which uses Spring Boot along with
               React JS and Tailwind CSS. The application allows authenticated
               persons to add students and also to validate their data, based on
               their passport. For this, it uses Azure’s Form Recognizer. Also, the
-              application is partially tested using Mockito.
+              application is partially tested using Cypress along with Cucumber.
             </p>
-            <div class="tags">
-              <div class="tag">HTML</div>
-              <div class="tag">CSS</div>
-              <div class="tag">JavaScript</div>
-              <div class="tag">ReactJS</div>
-              <div class="tag">Tailwind CSS</div>
-              <div class="tag">Firebase</div>
-            </div>
-          </div>
-        </div>
-        <div class="outerProject">
-          <div class="mProject" onclick="slideDown(event)">
-            <div class="firstPart">
-              <img onclick="openDescriptionWithTitle(event)" src="./images/todoStock.webp" alt="Todo application" />
-              <p onclick="openDescriptionWithTitle(event)">Todo application</p>
-            </div>
-            <img class="arrowIcon" src="./images/downArrow.webp" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
-          </div>
-          <div class="description">
-            <p>This application is a fullstack TODO application where at the
-              backend I’ve used Spring Boot and at the frontend React JS
-              (with Chakra UI component library). The application allows all the
-              CRUD operations for TODO items. It also uses Spring Secu-
-              rity (authentication and authorization). Design and architectural
-              principles were applied.
+            <p data-hu>
+              Az alkalmazás maga egy úgynevezett full stack alkalmazás, amely kliens oldalon a React JS keretrendszert és a Tailwind CSS stilizálási keretrendszert használva teszi lehetővé a hallgatói adatok kezelését. Az alkalmazás lehetővé teszi a felvitt adatok automatikus ellenőrzését is, melyhez a Microsoft Azure AI Vision és Document Intelligence szolgáltatásait használja fel. Az alkalmazás tesztelve is van a Cypress és Cucumber eszköztárát felhasználva. 
             </p>
             <div class="repoLink">
               <svg
@@ -617,7 +695,56 @@
                   fill="#878787"
                   ></path>
               </svg>
-              <a href="https://github.com/markvarga21/todoApplicationFrontend" target="_blank">Repository</a>
+              <a data-en href="https://github.com/markvarga21/studentManagerFrontend" target="_blank">Repository</a>
+              <a data-hu href="https://github.com/markvarga21/studentManagerFrontend" target="_blank">Tároló</a>
+            </div>
+            <div class="tags">
+              <div class="tag">HTML</div>
+              <div class="tag">CSS</div>
+              <div class="tag">JavaScript</div>
+              <div class="tag">ReactJS</div>
+              <div class="tag">Tailwind CSS</div>
+              <div class="tag">Cypress</div>
+              <div class="tag">Cucumber</div>
+            </div>
+          </div>
+        </div>
+        <div class="outerProject">
+          <div class="mProject" onclick="slideDown(event)">
+            <div class="firstPart">
+              <img onclick="openDescriptionWithTitle(event)" src="./images/todoStock.webp" alt="Todo application" />
+              <p data-en onclick="openDescriptionWithTitle(event)">Todo application</p>
+              <p data-hu onclick="openDescriptionWithTitle(event)">Teendőlista alkalmazás</p>
+            </div>
+            <img class="arrowIcon" src="./images/downArrow.webp" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
+          </div>
+          <div class="description">
+            <p data-en>
+              This application is a fullstack Todo application where at the
+              backend I’ve used Spring Boot and at the frontend React JS
+              (with Chakra UI component library). The application allows all the
+              CRUD operations for Todo items.
+            </p>
+            <p data-hu>
+              Ezen alkalmazás szintén egy full stack alkalmazás, mely React JS-t használ a kliens oldalon, a Chakra UI komponens könyvtárral. A rendszer lehetővé teszi autentikált felhasználóknak a napi teendőiknek felvitelét és esetleges módosítását.
+            </p>
+            <div class="repoLink">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="30"
+                height="30"
+                viewBox="0 0 32 32"
+                >
+                <path
+                  fill-rule="evenodd"
+                  d="M 16 4 C 9.371094 4 4 9.371094 4 16 C 4 21.300781 7.4375 25.800781 12.207031 27.386719 C 12.808594 27.496094 13.027344 27.128906 13.027344 26.808594 C 13.027344 26.523438 13.015625 25.769531 13.011719 24.769531 C 9.671875 25.492188 8.96875 23.160156 8.96875 23.160156 C 8.421875 21.773438 7.636719 21.402344 7.636719 21.402344 C 6.546875 20.660156 7.71875 20.675781 7.71875 20.675781 C 8.921875 20.761719 9.554688 21.910156 9.554688 21.910156 C 10.625 23.746094 12.363281 23.214844 13.046875 22.910156 C 13.15625 22.132813 13.46875 21.605469 13.808594 21.304688 C 11.144531 21.003906 8.34375 19.972656 8.34375 15.375 C 8.34375 14.0625 8.8125 12.992188 9.578125 12.152344 C 9.457031 11.851563 9.042969 10.628906 9.695313 8.976563 C 9.695313 8.976563 10.703125 8.65625 12.996094 10.207031 C 13.953125 9.941406 14.980469 9.808594 16 9.804688 C 17.019531 9.808594 18.046875 9.941406 19.003906 10.207031 C 21.296875 8.65625 22.300781 8.976563 22.300781 8.976563 C 22.957031 10.628906 22.546875 11.851563 22.421875 12.152344 C 23.191406 12.992188 23.652344 14.0625 23.652344 15.375 C 23.652344 19.984375 20.847656 20.996094 18.175781 21.296875 C 18.605469 21.664063 18.988281 22.398438 18.988281 23.515625 C 18.988281 25.121094 18.976563 26.414063 18.976563 26.808594 C 18.976563 27.128906 19.191406 27.503906 19.800781 27.386719 C 24.566406 25.796875 28 21.300781 28 16 C 28 9.371094 22.628906 4 16 4 Z"
+                  fill="#878787"
+                  ></path>
+              </svg>
+              <a data-en href="https://github.com/markvarga21/todoApplicationFrontend" target="_blank">Repository</a>
+              <a data-hu href="https://github.com/markvarga21/todoApplicationFrontend" target="_blank">Tároló</a>
             </div>
             <div class="tags">
               <div class="tag">HTML</div>
@@ -632,15 +759,20 @@
           <div class="mProject" onclick="slideDown(event)">
             <div class="firstPart">
               <img onclick="openDescriptionWithTitle(event)" src="./images/gameTraderStock.webp" alt="Game trader image" />
-              <p onclick="openDescriptionWithTitle(event)">Game trader</p>
+              <p data-en onclick="openDescriptionWithTitle(event)">Game trader</p>
+              <p data-hu onclick="openDescriptionWithTitle(event)">Számítógépes játék csere-berélő</p>
             </div>
             <img class="arrowIcon" src="./images/downArrow.webp" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
           </div>
           <div class="description">
-            <p>This application is partially implemented, yet it is functional. It
+            <p data-en>
+              This application is partially implemented, yet it is functional. It
               uses the IGDB API for fetching video games. These games are then
               used for trading purposes, along the application's users. The app also provides minor chat support which is based on
               HTTP protocol.
+            </p>
+            <p data-hu>
+              Ezen applikáció részben van lefejlesztve, de ettől még működőképes. Lehetővé teszi a számítógépes játékok csereberéjét a játékosok között. Az IGDB API-ját használja fel a különböző számítógépes játékok adatainak lekérésére. Továbbá, az alkalmazás lehetőséget biztosít a chat használatára is, HTTP protokollt használva.
             </p>
             <div class="repoLink">
               <svg
@@ -657,7 +789,8 @@
                   fill="#878787"
                   ></path>
               </svg>
-              <a href="https://github.com/markvarga21/gameTraderFrontend" target="_blank">Repository</a>
+              <a data-en href="https://github.com/markvarga21/gameTraderFrontend" target="_blank">Repository</a>
+              <a data-hu href="https://github.com/markvarga21/gameTraderFrontend" target="_blank">Tároló</a>
             </div>
             <div class="tags">
               <div class="tag">HTML</div>
@@ -671,19 +804,22 @@
           <div class="mProject" onclick="slideDown(event)">
             <div class="firstPart">
               <img onclick="openDescriptionWithTitle(event)" src="./images/zohoPeopleHelperStock.webp" alt="Zoho People application image" />
-              <p onclick="openDescriptionWithTitle(event)">Zoho People helper</p>
+              <p data-en onclick="openDescriptionWithTitle(event)">Zoho People helper</p>
+              <p data-hu onclick="openDescriptionWithTitle(event)">Zoho People kisegítő</p>
             </div>
             <img class="arrowIcon" src="./images/downArrow.webp" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
           </div>
           <div class="description">
-            <p>This project was made at a company named
-              The It Solutions Bv., where I was an back-
-              end developer intern. This eases the steps
+            <p data-en>This project was made at a company named
+              The It Solutions Bv., where I was an backend developer intern. This eases the steps
               of adding time stamps to Zoho People. It
               communicates with Zoho People API, and
               is partially tested. It also has a frontend
               (written in React JS) and a backend (using
               Spring Boot).
+            </p>
+            <p data-hu>
+              Az alkalmazás szakmai gyakorlatom alatt került elkészítésre a TIS Hungary Kft. magyar cégnél. A platform megkönnyíti a Zoho People-hoz kapcsolódó műveleteket. A kliens oldalnál React JS volt felhasználva.
             </p>
             <div class="repoLink">
               <svg
@@ -700,7 +836,8 @@
                   fill="#878787"
                   ></path>
               </svg>
-              <a href="https://github.com/markvarga21/zohoApplicationFrontend" target="_blank">Repository</a>
+              <a data-en href="https://github.com/markvarga21/zohoApplicationFrontend" target="_blank">Repository</a>
+              <a data-hu href="https://github.com/markvarga21/zohoApplicationFrontend" target="_blank">Tároló</a>
             </div>
             <div class="tags">
               <div class="tag">HTML</div>
@@ -716,16 +853,19 @@
           <div class="mProject" onclick="slideDown(event)">
             <div class="firstPart">
               <img onclick="openDescriptionWithTitle(event)" src="./images/racingGameStock.webp" alt="Racing game image" />
-              <p onclick="openDescriptionWithTitle(event)">Racing game</p>
+              <p data-en onclick="openDescriptionWithTitle(event)">Racing game</p>
+              <p data-hu onclick="openDescriptionWithTitle(event)">Autóversenyzős játék</p>
             </div>
             <img class="arrowIcon" src="./images/downArrow.webp" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
           </div>
           <div class="description">
-            <p>This little game was made for a class in my bachelor’s degree, by
-              my collegue and me. It is a simple game, where a car is racing on
+            <p data-en>This little game was made for a class in my bachelor’s degree, by
+              my classmate and me. It is a simple game, where a car is racing on
               a track, but not by using exact commands, but by reinforcement
               learning. This feature is implemented using Unity’s reinforcement
               learning featureset.
+            </p>
+            <p data-hu>Ez a kis játék az alapképzésem során lett elkészítve egy szaktársam és jómagam által. Ez egy egyszerű játék, ahol egy autó megy körbe-körbe egy előre elkészített pályán, de nem a felhasználó által irányítva, hanem magától. Az ágens (autó) be lett tanítva a Unity megerősítéses tanulásos eszköztárának felhasználásával, így képes az önálló működésre.
             </p>
             <div class="repoLink">
               <svg
@@ -742,7 +882,8 @@
                   fill="#878787"
                   ></path>
               </svg>
-              <a href="https://github.com/markvarga21/racingML" target="_blank">Repository</a>
+              <a data-en href="https://github.com/markvarga21/racingML" target="_blank">Repository</a>
+              <a data-hu href="https://github.com/markvarga21/racingML" target="_blank">Tároló</a>
             </div>
             <div class="tags">
               <div class="tag">Machine learning</div>
@@ -755,13 +896,17 @@
           <div class="mProject" onclick="slideDown(event)">
             <div class="firstPart">
               <img onclick="openDescriptionWithTitle(event)" src="./images/treasureFetcher.webp" alt="Treasure search" />
-              <p onclick="openDescriptionWithTitle(event)">Treasure search</p>
+              <p data-en onclick="openDescriptionWithTitle(event)">Treasure search</p>
+              <p data-hu onclick="openDescriptionWithTitle(event)">Kincskereső játék</p>
             </div>
             <img class="arrowIcon" src="./images/downArrow.webp" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
           </div>
           <div class="description">
-            <p>This project is a Reinforcement learning based game made in Unity, where the player (skeleton) has to find the treasure chest without getting caught by the hunter (mummy).
-              <br>It uses Unity's reinforcement learning utilities.</p>
+            <p data-en>This project is a Reinforcement learning based game made in Unity, where the player (skeleton) has to find the treasure chest without getting caught by the hunter (mummy).
+              <br>It uses Unity's reinforcement learning utilities.
+            </p>
+            <p data-hu>A projektben egy csontváznak kell eljutnia a kincses ládához még mielőtt a múmia utólérné és elkapná. Ezt az egészet magától teszi az ágens (csontváz), hiszen be lett tanítva megerősítéses tanulást használva.
+              <br>Ehhez, a Unity megerősítéses tanuláshoz kapcsolódó eszközkészletét használja.
             </p>
             <div class="repoLink">
               <svg
@@ -778,7 +923,8 @@
                   fill="#878787"
                   ></path>
               </svg>
-              <a href="https://github.com/markvarga21/tomAndJerryRL" target="_blank">Repository</a>
+              <a data-en href="https://github.com/markvarga21/tomAndJerryRL" target="_blank">Repository</a>
+              <a data-hu href="https://github.com/markvarga21/tomAndJerryRL" target="_blank">Tároló</a>
             </div>
             <div class="tags">
               <div class="tag">Machine learning</div>
@@ -791,12 +937,14 @@
           <div class="mProject" onclick="slideDown(event)">
             <div class="firstPart">
               <img onclick="openDescriptionWithTitle(event)" src="./images/opticalResearchStock.webp" alt="Optical research disk image" />
-              <p onclick="openDescriptionWithTitle(event)">Optical disk data quality</p>
+              <p data-en onclick="openDescriptionWithTitle(event)">Optical disk data quality classifier</p>
+              <p data-hu onclick="openDescriptionWithTitle(event)">Optikai lemez adatminőségi osztályozó</p>
             </div>
             <img class="arrowIcon" src="./images/downArrow.webp" alt="Down arrow" onclick="openDescriptionWithArrow(event)"/>
           </div>
           <div class="description">
-            <p>In this research, I've developed a binary classification model, which can predict the data quality of an optical disk based on some pictures taken of its back side, with a precision over 70%. While developing, I've combined several machine learning tehcnologies like scikit-learn, keras and many others.</p>
+            <p data-en>In this research, I've developed a binary classification model, which can predict the data quality of an optical disk based on some pictures taken of its back side, with a precision over 70%. While developing, I've combined several machine learning technologies like scikit-learn, keras and many others.</p>
+            <p data-hu>A kutatásom során, elkészítettem egy bináris osztályozó modellt, amely képes meghatározni az optikai lemezeken tárolt adatok minőségét, melyhez elegendő csupán pár képet készíteni a lemez hátoldaláról. Mindezt 70%-os pontosság mellett teszi. A fejlesztés során számos gépi tanulásos technológiát használtam, úgy mint a scikit-learn, keras és sok más egyéb.</p>
             <div class="tags">
               <div class="tag">Machine learning</div>
               <div class="tag">Binary classification</div>
@@ -808,8 +956,10 @@
       </div>
     </div>
     <div id="contact">
-      <div class="title">Contact me</div>
-      <div class="description">Let's get this conversation started! Tell me a bit about yourself, and<br>I'll get in touch with you as soon as possible.</div>
+      <div data-en class="title">Contact me</div>
+      <div data-en class="description">Let's get this conversation started! Tell me a bit about yourself, and<br>I'll get in touch with you as soon as possible.</div>
+      <div data-hu class="title">Kapcsolat</div>
+      <div data-hu class="description">Vegye fel velem a kapcsolatot! Meséljen az ötletéről, és<br>én a lehető legrövidebb időn belül felkeresem!</div>
       <div class="contactMobile">
         <div id="linkedinMobile">
           <svg
@@ -848,21 +998,28 @@
       <form id="contactForm">
         <div class="names">
           <div class="subInput">
-            <label for="contactFirstName">First name</label>
-            <input id="contactFirstName" type="text" placeholder="John" required/>
-            <label for="contactLastName">Last name</label>
-            <input id="contactLastName" type="text" placeholder="Doe" required/>
+            <label data-en for="contactFirstName">First name</label>
+            <label data-hu for="contactFirstName">Keresztnév</label>
+            <input id="contactFirstName" type="text" required/>
+            <label data-en for="contactLastName">Last name</label>
+            <label data-hu for="contactLastName">Vezetéknév</label>
+            <input id="contactLastName" type="text" required/>
           </div>
         </div>
         <div class="subInput">
-          <label for="subject">Subject</label>
-          <input id="subject" type="text" placeholder="Order information" required/>
+          <label data-en for="subject">Subject</label>
+          <label data-hu for="subject">Tárgy</label>
+          <input id="subject" type="text" required/>
         </div>
         <div class="subInput">
-          <label for="message">Message</label>
-          <textarea id="message" placeholder="Hello, my name is..." required></textarea>
+          <label data-en for="message">Message</label>
+          <label data-hu for="message">Üzenet</label>
+          <textarea id="message" required></textarea>
         </div>
-        <button id="contactSubmit" onclick="sendEmail(event)">Send</button>
+        <button id="contactSubmit" onclick="sendEmail(event)">
+          <span data-en>Send</span>
+          <span data-hu>Küldés</span>
+        </button>
       </form>
     </div>
     <div id="radialGradient"></div>

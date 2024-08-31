@@ -1,3 +1,82 @@
+let lang =
+  localStorage.getItem("language") ||
+  String(navigator.language.slice(0, 2)).toLowerCase();
+
+document.getElementsByClassName(`${lang}Label`)[0].classList.add("active");
+
+function handleHuClick() {
+  localStorage.setItem("language", "hu");
+  document.getElementsByClassName("huLabel")[0].classList.remove("active");
+  document.getElementsByClassName("huLabel")[0].classList.add("active");
+
+  location.reload();
+}
+
+function handleEnClick() {
+  localStorage.setItem("language", "en");
+  document.getElementsByClassName("enLabel")[0].classList.remove("active");
+  document.getElementsByClassName("enLabel")[0].classList.add("active");
+
+  location.reload();
+}
+
+const PAGE_DATA = {
+  en: {
+    nav: {
+      home: "Home",
+      about: "About",
+      projects: "Projects",
+      contact: "Contact",
+    },
+    project: {
+      backend: "Backend",
+      frontend: "Frontend",
+      ml: "Machine learning",
+    },
+  },
+  hu: {
+    nav: {
+      home: "Kezdőlap",
+      about: "Rólam",
+      projects: "Projektek",
+      contact: "Elérhetőség",
+    },
+    project: {
+      backend: "Szerver oldal",
+      frontend: "Kliens oldal",
+      ml: "Gépi tanulás",
+    },
+  },
+};
+
+handleFields();
+
+if (lang === "hu") {
+  console.log("hu");
+  document.querySelectorAll("[data-en]").forEach((element) => {
+    element.style.display = "none";
+  });
+} else {
+  console.log("en");
+  document.querySelectorAll("[data-hu]").forEach((element) => {
+    element.style.display = "none";
+  });
+}
+
+function handleFields() {
+  document.getElementById("mainNav").innerHTML = PAGE_DATA[lang].nav.home;
+  document.getElementById("aboutNav").innerHTML = PAGE_DATA[lang].nav.about;
+  document.getElementById("projectsNav").innerHTML =
+    PAGE_DATA[lang].nav.projects;
+  document.getElementById("contactNav").innerHTML = PAGE_DATA[lang].nav.contact;
+
+  document.getElementById("backend").innerHTML =
+    PAGE_DATA[lang].project.backend;
+  document.getElementById("frontend").innerHTML =
+    PAGE_DATA[lang].project.frontend;
+  document.getElementById("ml").innerHTML = PAGE_DATA[lang].project.ml;
+}
+
 document.getElementById("linkedinLink").addEventListener("click", () => {
   window.open("https://www.linkedin.com/in/markvarga21/", "_blank");
 });

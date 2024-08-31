@@ -233,6 +233,9 @@ body {
 }
 
 #mNavigations {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   visibility: hidden;
   background-color: #1e1e1e;
   position: absolute;
@@ -261,6 +264,9 @@ body {
 
 @media only screen and (max-width: 800px) {
   #mNavigations {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     visibility: hidden;
     background-color: #1e1e1e;
     position: absolute;
@@ -544,6 +550,9 @@ body {
   }
 
   #mNavigations {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     visibility: hidden;
     background-color: #1e1e1e;
     position: absolute;
@@ -557,4 +566,29 @@ body {
   #mNavigations .inner {
     padding: 2rem;
   }
+}
+
+.languageChange {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.languageChange div:hover {
+  cursor: pointer;
+}
+
+.active {
+  color: rgb(110, 243, 163);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+#mNavigations .languageChange {
+  padding-bottom: 2em;
+  padding-left: 2em;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
 }
