@@ -3,11 +3,15 @@ let lang =
   String(navigator.language.slice(0, 2)).toLowerCase();
 
 document.getElementsByClassName(`${lang}Label`)[0].classList.add("active");
+document.getElementsByClassName(`${lang}Label`)[1].classList.add("active");
 
 function handleHuClick() {
   localStorage.setItem("language", "hu");
   document.getElementsByClassName("huLabel")[0].classList.remove("active");
   document.getElementsByClassName("huLabel")[0].classList.add("active");
+
+  document.getElementsByClassName("huLabel")[1].classList.remove("active");
+  document.getElementsByClassName("huLabel")[1].classList.add("active");
 
   location.reload();
 }
@@ -16,6 +20,9 @@ function handleEnClick() {
   localStorage.setItem("language", "en");
   document.getElementsByClassName("enLabel")[0].classList.remove("active");
   document.getElementsByClassName("enLabel")[0].classList.add("active");
+
+  document.getElementsByClassName("enLabel")[1].classList.remove("active");
+  document.getElementsByClassName("enLabel")[1].classList.add("active");
 
   location.reload();
 }
