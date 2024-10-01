@@ -612,3 +612,23 @@ body {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 1280px) {
+  .scroll-progress {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 646px) {
+  #backend,
+  #frontend {
+    padding: 27px !important;
+  }
+}
+
+@media screen and (min-width: 647px) and (max-width: 669px) {
+  #backend,
+  #frontend {
+    padding: 16px !important;
+  }
+}
