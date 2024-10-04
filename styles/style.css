@@ -597,6 +597,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
   width: 100%;
   background-color: rgb(110, 243, 163);
   height: 0.25em;
