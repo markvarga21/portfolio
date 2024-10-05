@@ -621,20 +621,6 @@ body {
   }
 }
 
-@media screen and (max-width: 646px) {
-  #backend,
-  #frontend {
-    padding: 27px !important;
-  }
-}
-
-@media screen and (min-width: 647px) and (max-width: 669px) {
-  #backend,
-  #frontend {
-    padding: 16px !important;
-  }
-}
-
 footer {
   background-color: #1e1e1e;
   padding: 20px;
