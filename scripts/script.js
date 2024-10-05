@@ -38,7 +38,7 @@ const PAGE_DATA = {
     project: {
       backend: "Backend",
       frontend: "Frontend",
-      ml: "Machine learning",
+      ml: "AI",
     },
   },
   hu: {
@@ -51,7 +51,7 @@ const PAGE_DATA = {
     project: {
       backend: "Szerver oldal",
       frontend: "Kliens oldal",
-      ml: "Gépi tanulás",
+      ml: "AI",
     },
   },
 };
