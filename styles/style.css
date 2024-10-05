@@ -13,6 +13,7 @@
 body {
   background-color: #292524;
   overflow-x: hidden;
+  margin: 0;
 }
 
 ::selection {
@@ -632,4 +633,27 @@ body {
   #frontend {
     padding: 16px !important;
   }
+}
+
+footer {
+  background-color: #1e1e1e;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+  color: #858c92;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-credits a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-credits a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  margin-top: 10px;
 }

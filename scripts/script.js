@@ -270,3 +270,8 @@ function openProjectCategory(event) {
   }
   document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
 }
+
+document.getElementsByClassName("creditsYear")[0].innerHTML =
+  new Date().getFullYear();
+document.getElementsByClassName("creditsYear")[1].innerHTML =
+  new Date().getFullYear();
