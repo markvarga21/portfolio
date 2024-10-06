@@ -1,5 +1,6 @@
 #contact {
   height: fit-content;
+  padding-bottom: 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
