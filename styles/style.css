@@ -629,6 +629,7 @@ footer {
   margin-top: 2rem;
   color: #858c92;
   font-family: "Montserrat", sans-serif;
+  height: fit-content;
 }
 
 .footer-credits a {
