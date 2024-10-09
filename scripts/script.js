@@ -131,16 +131,16 @@ document
   });
 
 document
-.getElementsByClassName("linkedinSvg")[0]
-.addEventListener("click", () => {
-  window.open("https://www.linkedin.com/in/markvarga21/", "_blank");
-});
+  .getElementsByClassName("linkedinSvg")[0]
+  .addEventListener("click", () => {
+    window.open("https://www.linkedin.com/in/markvarga21/", "_blank");
+  });
 
 document
-.getElementsByClassName("linkedinSvg")[1]
-.addEventListener("click", () => {
-  window.open("https://www.linkedin.com/in/markvarga21/", "_blank");
-});
+  .getElementsByClassName("linkedinSvg")[1]
+  .addEventListener("click", () => {
+    window.open("https://www.linkedin.com/in/markvarga21/", "_blank");
+  });
 
 document.addEventListener("mousemove", function (event) {
   var mouseX = event.clientX;
