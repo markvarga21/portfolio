@@ -61,7 +61,8 @@
 }
 
 #linkedin,
-#github {
+#github,
+#instagram {
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -83,7 +84,8 @@
 }
 
 #linkedin p,
-#github p {
+#github p,
+#instagram p {
   position: relative;
   display: flex;
   align-items: center;
@@ -91,7 +93,8 @@
 }
 
 #linkedin p::after,
-#github p::after {
+#github p::after,
+#instagram p::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -103,11 +106,13 @@
 }
 
 #linkedin p:hover::after,
-#github p:hover::after {
+#github p:hover::after,
+#instagram p:hover::after {
   width: 100%;
 }
 
 #linkedin p:hover,
-#github p:hover {
+#github p:hover,
+#instagram p:hover {
   cursor: pointer;
 }

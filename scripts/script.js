@@ -91,11 +91,55 @@ document.getElementById("githubLink").addEventListener("click", () => {
   window.open("https://github.com/markvarga21", "_blank");
 });
 
+document.getElementById("instagramLink").addEventListener("click", () => {
+  window.open("https://instagram.com/varga_labs", "_blank");
+});
+
 document.getElementById("linkedinMobile").addEventListener("click", () => {
   window.open("https://www.linkedin.com/in/markvarga21/", "_blank");
 });
 document.getElementById("githubMobile").addEventListener("click", () => {
   window.open("https://github.com/markvarga21", "_blank");
+});
+
+document.getElementById("instagramLinkMobile").addEventListener("click", () => {
+  window.open("https://instagram.com/varga_labs", "_blank");
+});
+
+document
+  .getElementsByClassName("instagramSvg")[0]
+  .addEventListener("click", () => {
+    window.open("https://instagram.com/varga_labs", "_blank");
+  });
+
+document
+  .getElementsByClassName("instagramSvg")[1]
+  .addEventListener("click", () => {
+    window.open("https://instagram.com/varga_labs", "_blank");
+  });
+
+document
+  .getElementsByClassName("githubSvg")[0]
+  .addEventListener("click", () => {
+    window.open("https://github.com/markvarga21", "_blank");
+  });
+
+document
+  .getElementsByClassName("githubSvg")[1]
+  .addEventListener("click", () => {
+    window.open("https://github.com/markvarga21", "_blank");
+  });
+
+document
+.getElementsByClassName("linkedinSvg")[0]
+.addEventListener("click", () => {
+  window.open("https://www.linkedin.com/in/markvarga21/", "_blank");
+});
+
+document
+.getElementsByClassName("linkedinSvg")[1]
+.addEventListener("click", () => {
+  window.open("https://www.linkedin.com/in/markvarga21/", "_blank");
 });
 
 document.addEventListener("mousemove", function (event) {

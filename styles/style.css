@@ -420,7 +420,8 @@ body {
   }
 
   .contactMobile #linkedinMobile,
-  .contactMobile #githubMobile {
+  .contactMobile #githubMobile,
+  .contactMobile #instagramMobile {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -643,4 +644,14 @@ footer {
 
 .footer-copyright {
   margin-top: 10px;
+}
+
+.contact svg:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1100px) {
+  .contact p {
+    display: none !important;
+  }
 }
